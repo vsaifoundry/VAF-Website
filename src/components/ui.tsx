@@ -39,7 +39,7 @@ export const DotsIc = ({ light }: { light?: boolean }) => (
   <span className={`dots-ic${light ? " light" : ""}`} aria-hidden />
 );
 
-/** Word spans for the scroll-fill effect — rendered by React so the
+/** Word spans for the scroll-fill effect, rendered by React so the
  *  text swaps cleanly when the language changes. */
 export function FillWords({ text }: { text: string }) {
   const words = text.split(/\s+/);

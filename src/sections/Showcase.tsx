@@ -1,10 +1,11 @@
 import { SectionIntro } from "@/components/ui";
 import { SecFoot } from "@/components/SecFoot";
-import { VideoSlot } from "@/components/visuals";
+import { VideoSlot, N8nFlowVis } from "@/components/visuals";
 import { useLang } from "@/lib/i18n";
 
-/** Product demo reel. Drop a .mp4 or .gif into /public and pass it as
- *  `src` on any slot below to replace the placeholder. */
+/** Two showcase slots: the website reel placeholder (drop a .mp4 or
+ *  .gif into /public and pass it as `src` on VideoSlot to fill it),
+ *  and the animated n8n automation flow. */
 export function Showcase() {
   const { t } = useLang();
   return (
@@ -17,8 +18,9 @@ export function Showcase() {
           <div className="show-main">
             <VideoSlot wide name={t.showcase.slots[0]} />
           </div>
-          <VideoSlot name={t.showcase.slots[1]} />
-          <VideoSlot name={t.showcase.slots[2]} />
+          <div className="show-main">
+            <N8nFlowVis name={t.showcase.slots[1]} />
+          </div>
         </div>
 
         <SecFoot active={1} text={t.showcase.cta} to="contact" />

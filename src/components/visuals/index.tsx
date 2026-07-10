@@ -269,3 +269,95 @@ export const VideoSlot = ({
     </div>
   );
 };
+
+/** Animated n8n-style automation flow for the Showcase:
+ *  Website -> Supabase -> WhatsApp + Telegram -> Gmail, with flowing
+ *  connectors and traveling data packets. Pure inline SVG, no assets. */
+export const N8nFlowVis = ({ name }: { name: string }) => (
+  <div className="vslot wide n8n reveal">
+    <span className="vs-grid" />
+    <svg className="n8n-svg" viewBox="0 0 680 320" preserveAspectRatio="xMidYMid meet" aria-hidden>
+      {/* editor chrome */}
+      <circle cx="28" cy="30" r="4.5" fill="#FF5F57" />
+      <circle cx="46" cy="30" r="4.5" fill="#FEBC2E" />
+      <circle cx="64" cy="30" r="4.5" fill="#28C840" />
+      <text x="86" y="35" fontSize="13" fontWeight="700" fill="#EA4B71" fontFamily="inherit">n8n</text>
+      <text x="118" y="35" fontSize="12" fill="rgba(255,255,255,.45)" fontFamily="inherit">workflow</text>
+      <g className="n8n-live">
+        <circle cx="632" cy="30" r="4" fill="#28C840" />
+        <text x="644" y="34" fontSize="11" fontWeight="600" fill="rgba(255,255,255,.6)" fontFamily="inherit">24/7</text>
+      </g>
+
+      {/* connectors: base + animated flow + ports */}
+      <path id="n8nA" d="M140,160 C168,160 168,160 196,160" fill="none" />
+      <path id="n8nB" d="M308,160 C340,160 340,96 372,96" fill="none" />
+      <path id="n8nC" d="M308,160 C340,160 340,228 372,228" fill="none" />
+      <path id="n8nD" d="M484,96 C516,96 516,160 544,160" fill="none" />
+      <path id="n8nE" d="M484,228 C516,228 516,160 544,160" fill="none" />
+      {["n8nA", "n8nB", "n8nC", "n8nD", "n8nE"].map((id) => (
+        <g key={id}>
+          <use href={`#${id}`} stroke="rgba(122,160,255,.16)" strokeWidth="2.5" />
+          <use href={`#${id}`} className="n8n-link" stroke="#5B8CFF" strokeWidth="2" />
+        </g>
+      ))}
+      {[[140, 160], [196, 160], [308, 160], [372, 96], [372, 228], [484, 96], [484, 228], [544, 160]].map(([x, y], i) => (
+        <circle key={i} className="n8n-port" cx={x} cy={y} r="3.2" fill="#5B8CFF" />
+      ))}
+
+      {/* traveling packets */}
+      <circle r="4" fill="#FFCC00">
+        <animateMotion dur="2.6s" repeatCount="indefinite" begin="0s"><mpath href="#n8nA" /></animateMotion>
+      </circle>
+      <circle r="4" fill="#FFCC00">
+        <animateMotion dur="2.6s" repeatCount="indefinite" begin="0.85s"><mpath href="#n8nB" /></animateMotion>
+      </circle>
+      <circle r="4" fill="#FFCC00">
+        <animateMotion dur="2.6s" repeatCount="indefinite" begin="1.05s"><mpath href="#n8nC" /></animateMotion>
+      </circle>
+      <circle r="4" fill="#FFCC00">
+        <animateMotion dur="2.6s" repeatCount="indefinite" begin="1.75s"><mpath href="#n8nD" /></animateMotion>
+      </circle>
+      <circle r="4" fill="#FFCC00">
+        <animateMotion dur="2.6s" repeatCount="indefinite" begin="1.95s"><mpath href="#n8nE" /></animateMotion>
+      </circle>
+
+      {/* nodes */}
+      {[
+        { x: 28, y: 128, label: "Website" },
+        { x: 196, y: 128, label: "Supabase" },
+        { x: 372, y: 64, label: "WhatsApp" },
+        { x: 372, y: 196, label: "Telegram" },
+        { x: 544, y: 128, label: "Gmail" },
+      ].map((n) => (
+        <g key={n.label}>
+          <rect x={n.x} y={n.y} width="112" height="64" rx="14"
+            fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.16)" strokeWidth="1.2" />
+          <text x={n.x + 66} y={n.y + 37} fontSize="13" fontWeight="600"
+            fill="#E8ECF4" textAnchor="middle" fontFamily="inherit">{n.label}</text>
+        </g>
+      ))}
+
+      {/* icons */}
+      <g transform="translate(50,160)">{/* globe */}
+        <circle r="10" fill="none" stroke="#7AA2FF" strokeWidth="1.7" />
+        <path d="M-10,0 H10 M0,-10 C4,-6 4,6 0,10 C-4,6 -4,-6 0,-10Z" fill="none" stroke="#7AA2FF" strokeWidth="1.4" />
+      </g>
+      <g transform="translate(218,160)">{/* supabase bolt */}
+        <path d="M2,-11 L-7,2 H-1 L-2,11 L7,-2 H1 Z" fill="#3ECF8E" />
+      </g>
+      <g transform="translate(394,96)">{/* whatsapp */}
+        <circle r="10.5" fill="#25D366" />
+        <path d="M-4.5,-3.5 c0,5 3,8 8,8 l1.4-2 -2.6-1.6 -1.2,1 c-1.6-.8-2.6-1.8-3.4-3.4 l1-1.2 -1.6-2.6 Z" fill="#fff" />
+      </g>
+      <g transform="translate(394,228)">{/* telegram */}
+        <circle r="10.5" fill="#2AA9EB" />
+        <path d="M-5.5,-0.5 L5.5,-4.5 L3.2,5 L0.4,2.4 L-1.4,4 L-1.6,1 Z" fill="#fff" />
+      </g>
+      <g transform="translate(566,160)">{/* gmail */}
+        <rect x="-10" y="-7.5" width="20" height="15" rx="2.5" fill="#fff" />
+        <path d="M-9,-5.5 L0,2 L9,-5.5" fill="none" stroke="#EA4335" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+      </g>
+    </svg>
+    <span className="vs-name">{name}</span>
+  </div>
+);
