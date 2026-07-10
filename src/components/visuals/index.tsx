@@ -361,3 +361,52 @@ export const N8nFlowVis = ({ name }: { name: string }) => (
     <span className="vs-name">{name}</span>
   </div>
 );
+
+/** Animated website showcase: a browser window cycling through real
+ *  client builds with a slow zoom, a live URL bar, and a cursor that
+ *  glides to each site's booking button and clicks. Pure CSS timeline
+ *  (18s loop, 4.5s per site) driven by staggered negative delays. */
+const WS_SITES = [
+  { img: "/img/site-kopitiam.jpg", url: "vaf-kopitiam.lovable.app", title: "VAF Kopitiam" },
+  { img: "/img/site-clean.jpg", url: "vaf-clean.lovable.app", title: "VAF Clean" },
+  { img: "/img/site-pet.jpg", url: "vaf-pet-botique.lovable.app", title: "VAF Pet Boutique" },
+  { img: "/img/site-dental.jpg", url: "vaf-dental.lovable.app", title: "VAF Dental" },
+];
+const wsDelay = (i: number) => ({ animationDelay: `${i * 4.5 - 18}s` });
+
+export const WebShowcaseVis = ({ name }: { name: string }) => (
+  <div className="vslot wide webshow reveal">
+    <div className="ws-chrome">
+      <span className="ws-dot r" /><span className="ws-dot y" /><span className="ws-dot g" />
+      <span className="ws-urlbar">
+        <svg viewBox="0 0 24 24" className="ws-lock" aria-hidden>
+          <rect x="5" y="10" width="14" height="10" rx="2.5" fill="none" stroke="currentColor" strokeWidth="1.8" />
+          <path d="M8 10V7.6A4 4 0 0 1 16 7.6V10" fill="none" stroke="currentColor" strokeWidth="1.8" />
+        </svg>
+        {WS_SITES.map((s, i) => (
+          <span key={s.url} className="ws-url" style={wsDelay(i)}>{s.url}</span>
+        ))}
+      </span>
+    </div>
+
+    <div className="ws-stage">
+      {WS_SITES.map((s, i) => (
+        <div key={s.url} className="ws-slide" style={wsDelay(i)}>
+          <img src={s.img} alt={s.title} style={wsDelay(i)} loading="lazy" />
+        </div>
+      ))}
+
+      <span className="ws-ripple" aria-hidden />
+      <span className="ws-cursor" aria-hidden>
+        <svg viewBox="0 0 24 24">
+          <path d="M5 3l14 8.5-6.2 1.4L10 19.5 5 3z" fill="#fff" stroke="#111" strokeWidth="1.4" strokeLinejoin="round" />
+        </svg>
+      </span>
+
+      {WS_SITES.map((s, i) => (
+        <span key={s.title} className={`ws-tab${i === 0 ? " on" : ""}`} style={wsDelay(i)}>{s.title}</span>
+      ))}
+    </div>
+    <span className="vs-name">{name}</span>
+  </div>
+);

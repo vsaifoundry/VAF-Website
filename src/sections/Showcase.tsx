@@ -1,11 +1,10 @@
 import { SectionIntro } from "@/components/ui";
 import { SecFoot } from "@/components/SecFoot";
-import { VideoSlot, N8nFlowVis } from "@/components/visuals";
+import { WebShowcaseVis, N8nFlowVis } from "@/components/visuals";
 import { useLang } from "@/lib/i18n";
 
-/** Two showcase slots: the website reel placeholder (drop a .mp4 or
- *  .gif into /public and pass it as `src` on VideoSlot to fill it),
- *  and the animated n8n automation flow. */
+/** Two showcase slots: an animated browser reel of real client
+ *  website builds, and the animated n8n automation flow. */
 export function Showcase() {
   const { t } = useLang();
   return (
@@ -16,7 +15,7 @@ export function Showcase() {
 
         <div className="show-grid">
           <div className="show-main">
-            <VideoSlot wide name={t.showcase.slots[0]} />
+            <WebShowcaseVis name={t.showcase.slots[0]} />
           </div>
           <div className="show-main">
             <N8nFlowVis name={t.showcase.slots[1]} />
