@@ -15,10 +15,10 @@ export function Showcase() {
 
         <div className="show-grid">
           <div className="show-main">
-            <WebShowcaseVis name={t.showcase.slots[0]} />
+            <N8nFlowVis name={t.showcase.slots[1]} />
           </div>
           <div className="show-main">
-            <N8nFlowVis name={t.showcase.slots[1]} />
+            <WebShowcaseVis name={t.showcase.slots[0]} />
           </div>
         </div>
 
