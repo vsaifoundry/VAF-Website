@@ -363,7 +363,7 @@ export const N8nFlowVis = ({ name }: { name: string }) => (
 );
 
 /** Animated website showcase: a browser window cycling through real
- *  client builds with a slow zoom, a live URL bar, and a cursor that
+ *  client builds with a live URL bar, and a cursor that
  *  glides to each site's booking button and clicks. Pure CSS timeline
  *  (18s loop, 4.5s per site) driven by staggered negative delays. */
 const WS_SITES = [
@@ -392,7 +392,7 @@ export const WebShowcaseVis = ({ name }: { name: string }) => (
     <div className="ws-stage">
       {WS_SITES.map((s, i) => (
         <div key={s.url} className="ws-slide" style={wsDelay(i)}>
-          <img src={s.img} alt={s.title} style={wsDelay(i)} loading="lazy" />
+          <img src={s.img} alt={s.title} loading="lazy" />
         </div>
       ))}
 
