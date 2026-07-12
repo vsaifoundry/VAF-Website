@@ -1549,7 +1549,7 @@ export const CHATBOT: Record<Lang, ChatbotDict> = {
       pricing: "Our builds come in three tiers: Starter Systems (RM 3,000-8,000 one-time or RM 800/mo), Business Automation (RM 8,000-25,000 or RM 1,800/mo, most popular), and Advanced AI Systems (RM 25,000+ or RM 3,500/mo). The smallest full build is RM 2,500, and the RM 500 audit is fully deducted from your build cost.",
       audit: "The AI Audit is a 90-minute deep dive into your business. It costs RM 500, fully deducted from your build cost if you proceed. You get a full system blueprint, platform recommendations, and a clear build timeline. Start by DMing AUDIT to @vsaifoundry on Instagram or using the form on this page.",
       process: "Four steps: 1) DM AUDIT to @vsaifoundry, 2) your 90-minute audit session, 3) receive your system blueprint, 4) we build, stress-test in the AI Forge, and deploy. The WA Starter Bot takes ~2 weeks and the WA Smart System ~3 weeks; custom builds are scoped after your audit.",
-      contact: "The fastest way is a DM to @vsaifoundry on Instagram, send the word AUDIT to start. You can also use the contact form at the bottom of this page and we'll get back to you within 24 hours.",
+      contact: "You can reach us on WhatsApp or Telegram at +60 11-3300 6972, email forge@vsaifoundry.com, or DM @vsaifoundry on Instagram (send the word AUDIT to start). The contact form at the bottom of this page also works, we reply within 24 hours.",
     },
   },
   ms: {
@@ -1565,7 +1565,7 @@ export const CHATBOT: Record<Lang, ChatbotDict> = {
       pricing: "Pembinaan kami ada tiga peringkat: Sistem Permulaan (RM 3,000-8,000 sekali bayar atau RM 800/bulan), Automasi Perniagaan (RM 8,000-25,000 atau RM 1,800/bulan, paling popular), dan Sistem AI Lanjutan (RM 25,000+ atau RM 3,500/bulan). Pembinaan penuh terkecil ialah RM 2,500, dan audit RM 500 ditolak sepenuhnya daripada kos pembinaan anda.",
       audit: "Audit AI ialah sesi mendalam 90 minit tentang perniagaan anda. Harganya RM 500, ditolak sepenuhnya daripada kos pembinaan jika anda meneruskan. Anda menerima pelan sistem penuh, cadangan platform, dan garis masa yang jelas. Mulakan dengan DM AUDIT ke @vsaifoundry di Instagram atau gunakan borang di halaman ini.",
       process: "Empat langkah: 1) DM AUDIT ke @vsaifoundry, 2) sesi audit 90 minit anda, 3) terima pelan sistem anda, 4) kami bina, uji tekanan di AI Forge, dan lancarkan. WA Starter Bot mengambil ~2 minggu dan WA Smart System ~3 minggu; pembinaan tersuai ditentukan selepas audit anda.",
-      contact: "Cara terpantas ialah DM ke @vsaifoundry di Instagram, hantar perkataan AUDIT untuk bermula. Anda juga boleh gunakan borang hubungi di bahagian bawah halaman ini dan kami akan membalas dalam masa 24 jam.",
+      contact: "Anda boleh hubungi kami melalui WhatsApp atau Telegram di +60 11-3300 6972, e-mel forge@vsaifoundry.com, atau DM @vsaifoundry di Instagram (hantar perkataan AUDIT untuk bermula). Borang hubungi di bahagian bawah halaman ini juga boleh digunakan, kami membalas dalam masa 24 jam.",
     },
   },
   zh: {
@@ -1581,7 +1581,7 @@ export const CHATBOT: Record<Lang, ChatbotDict> = {
       pricing: "我们的方案分三档：入门系统（RM 3,000-8,000 一次性，或 RM 800/月）、企业自动化（RM 8,000-25,000 或 RM 1,800/月，最受欢迎）、高级 AI 系统（RM 25,000+ 或 RM 3,500/月）。最小完整项目为 RM 2,500，RM 500 诊断费可全额抵扣搭建费用。",
       audit: "AI 诊断是一场 90 分钟的业务深度剖析，费用 RM 500，若继续合作可全额抵扣搭建费用。您将获得完整系统蓝图、平台建议和清晰的时间表。在 Instagram 私信 AUDIT 至 @vsaifoundry，或使用本页表单即可开始。",
       process: "四个步骤：1) 私信 AUDIT 至 @vsaifoundry，2) 进行 90 分钟诊断会议，3) 获取系统蓝图，4) 我们构建、在 AI Forge 中压力测试并部署。WA Starter Bot 约需 2 周，WA Smart System 约 3 周；定制项目在诊断后确定范围。",
-      contact: "最快的方式是在 Instagram 私信 @vsaifoundry，发送 AUDIT 即可开始。您也可以使用本页底部的联系表单，我们会在 24 小时内回复。",
+      contact: "您可以通过 WhatsApp 或 Telegram 联系我们：+60 11-3300 6972，发邮件至 forge@vsaifoundry.com，或在 Instagram 私信 @vsaifoundry（发送 AUDIT 即可开始）。也可以使用本页底部的联系表单，我们会在 24 小时内回复。",
     },
   },
   ja: {
@@ -1597,7 +1597,7 @@ export const CHATBOT: Record<Lang, ChatbotDict> = {
       pricing: "プランは3段階です：スターターシステム（RM 3,000-8,000 一括、または RM 800/月）、ビジネス自動化（RM 8,000-25,000 または RM 1,800/月、一番人気）、アドバンストAIシステム（RM 25,000+ または RM 3,500/月）。最小のフル構築は RM 2,500 で、RM 500 の診断料は構築費から全額差し引かれます。",
       audit: "AI診断は90分でビジネスを深掘りするセッションです。料金は RM 500 で、ご契約に進まれた場合は構築費から全額差し引かれます。システム設計図、プラットフォーム提案、明確なスケジュールをお渡しします。Instagramで @vsaifoundry に「AUDIT」とDMするか、このページのフォームからどうぞ。",
       process: "4つのステップです：1) @vsaifoundry に「AUDIT」とDM、2) 90分の診断セッション、3) 設計図の受け取り、4) 構築・AI Forgeでのストレステスト・導入。WA Starter Botは約2週間、WA Smart Systemは約3週間。カスタム構築は診断後にスコープを決定します。",
-      contact: "一番早いのはInstagramで @vsaifoundry へのDMです、「AUDIT」と送信してください。ページ下部のお問い合わせフォームもご利用いただけます。24時間以内にご連絡します。",
+      contact: "WhatsAppまたはTelegram（+60 11-3300 6972）、メール（forge@vsaifoundry.com）、またはInstagramの @vsaifoundry へのDM（「AUDIT」と送信）でご連絡いただけます。ページ下部のお問い合わせフォームも利用でき、24時間以内に返信します。",
     },
   },
   fr: {
@@ -1613,7 +1613,7 @@ export const CHATBOT: Record<Lang, ChatbotDict> = {
       pricing: "Nos constructions existent en trois formules : Systèmes Starter (RM 3,000-8,000 en une fois ou RM 800/mois), Automatisation Business (RM 8,000-25,000 ou RM 1,800/mois, la plus populaire) et Systèmes IA avancés (RM 25,000+ ou RM 3,500/mois). La plus petite construction complète est à RM 2,500, et l'audit à RM 500 est entièrement déduit du coût de construction.",
       audit: "L'audit IA est une analyse approfondie de 90 minutes de votre entreprise. Il coûte RM 500, entièrement déduits du coût de construction si vous poursuivez. Vous recevez un plan complet du système, des recommandations de plateformes et un calendrier clair. Envoyez « AUDIT » en DM à @vsaifoundry sur Instagram ou utilisez le formulaire de cette page.",
       process: "Quatre étapes : 1) DM « AUDIT » à @vsaifoundry, 2) votre session d'audit de 90 minutes, 3) réception de votre plan, 4) construction, tests dans l'AI Forge et déploiement. Le WA Starter Bot demande ~2 semaines, le WA Smart System ~3 semaines ; les projets sur mesure sont cadrés après l'audit.",
-      contact: "Le plus rapide : un DM à @vsaifoundry sur Instagram, envoyez le mot AUDIT pour commencer. Vous pouvez aussi utiliser le formulaire de contact en bas de cette page ; nous répondons sous 24 heures.",
+      contact: "Vous pouvez nous joindre sur WhatsApp ou Telegram au +60 11-3300 6972, par e-mail à forge@vsaifoundry.com, ou en DM à @vsaifoundry sur Instagram (envoyez le mot AUDIT pour commencer). Le formulaire de contact en bas de page fonctionne aussi, nous répondons sous 24 heures.",
     },
   },
 };
