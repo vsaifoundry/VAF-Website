@@ -14,6 +14,7 @@ import { Forge } from "@/sections/Forge";
 import { Audit } from "@/sections/Audit";
 import { Footer, BrandBand } from "@/sections/Footer";
 import { Chatbot } from "@/components/Chatbot";
+import { ContactBubble } from "@/components/ContactBubble";
 import { initSmoothScroll } from "@/lib/scroll";
 import { useRevealAll } from "@/hooks/useReveal";
 import { useFillTitles } from "@/hooks/useFillTitles";
@@ -53,6 +54,7 @@ const Index = () => {
         <Footer />
       </div>
       <Chatbot />
+      <ContactBubble />
     </>
   );
 };
