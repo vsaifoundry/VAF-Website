@@ -52,15 +52,20 @@ to `.env` and set `VITE_SUPABASE_ANON_KEY`. Until then, forms show a friendly
 The site ships with a themed chatbot (bottom-right) that only answers
 questions about V's AI Foundry, with guardrails against off-topic and
 prompt-injection attempts. It works out of the box with built-in quick
-answers; to make it fully AI-powered, set ONE of these:
+answers.
 
-1. **Recommended (production):** `VITE_CHAT_ENDPOINT` — a backend proxy
-   (e.g. a Supabase Edge Function) that keeps your OpenAI key server-side.
-   It receives `POST {messages:[{role,content},...]}` and returns
-   `{reply:"..."}`.
-2. **Quick start:** `VITE_OPENAI_API_KEY` — calls OpenAI directly from the
-   browser. Any key shipped to the browser is visible to visitors, so use a
-   spending limit and switch to option 1 before real traffic.
+To make it fully AI-powered (secure, key never reaches the browser):
 
-Both can also be pasted straight into `src/lib/config.ts`. Model defaults
-to `gpt-4o-mini` (`VITE_CHAT_MODEL` to change).
+1. Deploy the Supabase Edge Function in `supabase/functions/vaf-chat/index.ts`
+   (Supabase Dashboard -> Edge Functions -> Deploy new function -> name it
+   `vaf-chat` -> paste the file -> Deploy).
+2. Add your OpenAI key as a Supabase secret named `OPENAI_API_KEY`
+   (Edge Functions -> Secrets). Optional: `CHAT_MODEL` secret to change
+   the model (default gpt-4o-mini).
+3. Make sure `VITE_SUPABASE_ANON_KEY` is set (Vercel env or
+   src/lib/config.ts); the widget uses it to authenticate the call.
+
+The widget already points at `<SUPABASE_URL>/functions/v1/vaf-chat` by
+default and falls back to built-in answers until the function is live.
+`VITE_OPENAI_API_KEY` remains as a browser-side quick-test option only:
+any key shipped to the browser is visible to visitors.
