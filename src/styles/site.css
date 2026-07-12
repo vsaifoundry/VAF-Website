@@ -1866,6 +1866,57 @@ html[data-theme="dark"] .hero-title .w.lit{color:var(--text)}
 }
 
 /* ============================================================
+   CONTACT SPEED-DIAL (bottom-left)
+   ============================================================ */
+.contact-dial{position:fixed;left:22px;bottom:22px;z-index:57;display:flex;flex-direction:column;align-items:flex-start;gap:10px}
+.cd-fab{
+  width:58px;height:58px;border-radius:50%;
+  background:var(--panel);border:1px solid var(--line);color:var(--text);
+  display:grid;place-items:center;
+  box-shadow:0 18px 44px -16px rgba(17,19,24,.4);
+  transition:transform .3s var(--ease),border-color .3s;
+}
+.cd-fab:hover{transform:translateY(-3px);border-color:var(--orange)}
+.cd-fab svg{width:24px;height:24px}
+.cd-fab .cd-close-ic{display:none}
+.contact-dial.open .cd-open-ic{display:none}
+.contact-dial.open .cd-close-ic{display:block}
+html[data-theme="dark"] .cd-fab{box-shadow:0 18px 44px -16px rgba(0,0,0,.75)}
+
+.cd-items{display:flex;flex-direction:column;gap:9px}
+.cd-item{
+  display:flex;align-items:center;gap:10px;
+  opacity:0;visibility:hidden;transform:translateY(10px) scale(.9);
+  transition:opacity .3s var(--ease),transform .3s var(--ease),visibility 0s .3s;
+}
+.contact-dial.open .cd-item{opacity:1;visibility:visible;transform:none;transition:opacity .3s var(--ease),transform .3s var(--ease)}
+.cd-ic{
+  width:46px;height:46px;border-radius:50%;flex:none;
+  display:grid;place-items:center;color:#fff;
+  box-shadow:0 12px 26px -12px rgba(17,19,24,.5);
+  transition:transform .25s var(--ease);
+}
+.cd-item:hover .cd-ic{transform:translateY(-2px)}
+.cd-ic svg{width:21px;height:21px}
+.cd-item.ig .cd-ic{background:linear-gradient(45deg,#F58529,#DD2A7B 55%,#8134AF)}
+.cd-item.wa .cd-ic{background:#25D366}
+.cd-item.tg .cd-ic{background:#2AA9EB}
+.cd-item.gm .cd-ic{background:#EA4335}
+.cd-label{
+  padding:6px 12px;border-radius:999px;font-size:12.5px;font-weight:600;
+  background:var(--panel);border:1px solid var(--line);color:var(--text);
+  box-shadow:0 10px 24px -14px rgba(17,19,24,.4);
+}
+html[data-theme="dark"] .cd-label{box-shadow:0 10px 24px -14px rgba(0,0,0,.7)}
+
+@media (max-width:768px){
+  .contact-dial{left:14px;bottom:14px}
+  .cd-fab{width:52px;height:52px}
+  .cd-fab svg{width:21px;height:21px}
+  .cd-ic{width:42px;height:42px}
+}
+
+/* ============================================================
    VAF CHATBOT WIDGET
    ============================================================ */
 .vaf-fab{
