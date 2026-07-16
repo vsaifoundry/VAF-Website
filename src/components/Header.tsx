@@ -6,7 +6,7 @@ import type { Dict } from "@/data/translations";
 
 const NAV_IDS = [
   "home", "work", "showcase", "services", "process", "statistics", "pricing",
-  "faq", "team", "advisors", "reviews", "labs", "audit", "contact",
+  "faq", "team", "founding", "advisors", "reviews", "labs", "audit", "contact",
 ] as const;
 
 function useScrollSpy() {

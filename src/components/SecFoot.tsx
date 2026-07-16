@@ -1,6 +1,6 @@
 import { ScrollLink, ArrowIcon, Ticks } from "./ui";
 
-export const TICKS_TOTAL = 12;
+export const TICKS_TOTAL = 13;
 
 export function SecFoot({
   active, text, to, external,

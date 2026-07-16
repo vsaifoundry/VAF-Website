@@ -69,7 +69,7 @@ export function Audit() {
     <section className="section" id="audit">
       <div className="container">
         <h2 className="sec-title reveal">{a.secTitle}</h2>
-        <SectionIntro num="012" statement={a.statement} aside={a.aside} />
+        <SectionIntro num="013" statement={a.statement} aside={a.aside} />
 
         <div className="audit-grid reveal">
           <div className="audit-side">
@@ -175,7 +175,7 @@ export function Audit() {
           </div>
         </div>
 
-        <SecFoot active={11} text={a.cta} to="contact" />
+        <SecFoot active={12} text={a.cta} to="contact" />
       </div>
     </section>
   );

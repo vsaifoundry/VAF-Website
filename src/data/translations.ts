@@ -12,7 +12,7 @@ const en = {
   nav: {
     home: "Home", work: "Our Work", showcase: "Showcase", services: "Services",
     process: "Process", statistics: "Statistics", pricing: "Pricing", faq: "FAQ",
-    team: "Team", advisors: "Advisors", reviews: "Reviews", labs: "AI Forge",
+    team: "Team", founding: "Founding Team", advisors: "Advisors", reviews: "Reviews", labs: "AI Forge",
     audit: "Book Audit", contact: "Contact",
   },
   common: {
@@ -188,8 +188,15 @@ const en = {
         bio: "Founder and CEO of V's AI Foundry. Vincent leads every engagement end to end, the audit, the blueprint, and the final deployment all run through his review before anything ships." },
       { name: "Trisha Fong Muthu", role: "Co-Founder",
         bio: "Co-Founder of V's AI Foundry, shaping how the foundry runs behind the scenes, from operations to the client experience." },
-      { name: "Shaktheish", role: "AI Systems Engineer",
-        bio: "AI Systems Engineer. Shaktheish builds and validates production systems in the AI Forge, automation flows, integrations, and the stress-testing that happens before anything reaches a client." },
+    ],
+    cta: "Follow us on Instagram @vsaifoundry",
+  },
+  founding: {
+    secTitle: "Founding Team",
+    statement: "The engineers who build it.",
+    aside: "The hands-on team who build, test, and ship every system we deliver.",
+    label: "Founding Team",
+    people: [
       { name: "Kaviraj", role: "AI Systems Engineer",
         bio: "AI Systems Engineer. Kaviraj turns blueprints into working systems, building, testing, and deploying the automations that run our clients' operations." },
     ],
@@ -317,7 +324,7 @@ const ms: Dict = {
   nav: {
     home: "Laman Utama", work: "Hasil Kerja", showcase: "Pameran", services: "Perkhidmatan",
     process: "Proses", statistics: "Statistik", pricing: "Harga", faq: "Soalan Lazim",
-    team: "Pasukan", advisors: "Penasihat", reviews: "Ulasan", labs: "AI Forge",
+    team: "Pasukan", founding: "Pasukan Pengasas", advisors: "Penasihat", reviews: "Ulasan", labs: "AI Forge",
     audit: "Tempah Audit", contact: "Hubungi",
   },
   common: {
@@ -493,8 +500,15 @@ const ms: Dict = {
         bio: "Pengasas dan CEO V's AI Foundry. Vincent mengetuai setiap projek dari mula hingga akhir, audit, pelan sistem, dan pelancaran akhir semuanya melalui semakannya sebelum diserahkan." },
       { name: "Trisha Fong Muthu", role: "Pengasas Bersama",
         bio: "Pengasas Bersama V's AI Foundry, membentuk cara foundry ini beroperasi di sebalik tabir, daripada operasi hingga pengalaman pelanggan." },
-      { name: "Shaktheish", role: "Jurutera Sistem AI",
-        bio: "Jurutera Sistem AI. Shaktheish membina dan menguji sistem produksi di AI Forge, aliran automasi, integrasi, dan ujian tekanan sebelum apa-apa sampai kepada pelanggan." },
+    ],
+    cta: "Ikuti kami di Instagram @vsaifoundry",
+  },
+  founding: {
+    secTitle: "Pasukan Pengasas",
+    statement: "Jurutera yang membinanya.",
+    aside: "Pasukan yang membina, menguji, dan melancarkan setiap sistem yang kami serahkan.",
+    label: "Pasukan Pengasas",
+    people: [
       { name: "Kaviraj", role: "Jurutera Sistem AI",
         bio: "Jurutera Sistem AI. Kaviraj menterjemahkan pelan kepada sistem yang berfungsi, membina, menguji, dan melancarkan automasi yang menggerakkan operasi pelanggan kami." },
     ],
@@ -620,7 +634,7 @@ const zh: Dict = {
   nav: {
     home: "首页", work: "我们的作品", showcase: "案例展示", services: "服务",
     process: "流程", statistics: "数据", pricing: "价格", faq: "常见问题",
-    team: "团队", advisors: "顾问", reviews: "客户评价", labs: "AI Forge",
+    team: "团队", founding: "创始团队", advisors: "顾问", reviews: "客户评价", labs: "AI Forge",
     audit: "预约诊断", contact: "联系我们",
   },
   common: {
@@ -796,8 +810,15 @@ const zh: Dict = {
         bio: "V's AI Foundry 创始人兼 CEO。Vincent 全程主导每个项目，从诊断、蓝图到最终部署，每个环节都经他审核后才交付。" },
       { name: "Trisha Fong Muthu", role: "联合创始人",
         bio: "V's AI Foundry 联合创始人，在幕后塑造 foundry 的运作方式，从日常运营到客户体验。" },
-      { name: "Shaktheish", role: "AI 系统工程师",
-        bio: "AI 系统工程师。Shaktheish 在 AI Forge 中构建并验证生产系统，自动化流程、系统集成，以及交付客户前的压力测试。" },
+    ],
+    cta: "在 Instagram 关注我们 @vsaifoundry",
+  },
+  founding: {
+    secTitle: "创始团队",
+    statement: "亲手打造它的工程师。",
+    aside: "亲力亲为的团队，构建、测试并交付我们的每一套系统。",
+    label: "创始团队",
+    people: [
       { name: "Kaviraj", role: "AI 系统工程师",
         bio: "AI 系统工程师。Kaviraj 把蓝图变成可用的系统，构建、测试并部署驱动客户业务运转的自动化。" },
     ],
@@ -923,7 +944,7 @@ const ja: Dict = {
   nav: {
     home: "ホーム", work: "実績", showcase: "ショーケース", services: "サービス",
     process: "プロセス", statistics: "数字で見る", pricing: "料金", faq: "よくある質問",
-    team: "チーム", advisors: "アドバイザー", reviews: "お客様の声", labs: "AI Forge",
+    team: "チーム", founding: "創業チーム", advisors: "アドバイザー", reviews: "お客様の声", labs: "AI Forge",
     audit: "診断予約", contact: "お問い合わせ",
   },
   common: {
@@ -1099,8 +1120,15 @@ const ja: Dict = {
         bio: "V's AI Foundryの創業者兼CEO。Vincentはすべての案件を最初から最後まで率います、診断、設計図、最終導入まで、出荷前にすべて彼のレビューを通ります。" },
       { name: "Trisha Fong Muthu", role: "共同創業者",
         bio: "V's AI Foundryの共同創業者。オペレーションから顧客体験まで、foundryの舞台裏のあり方をかたちづくっています。" },
-      { name: "Shaktheish", role: "AIシステムエンジニア",
-        bio: "AIシステムエンジニア。ShaktheishはAI Forgeで本番システムを構築・検証します、自動化フロー、各種連携、そしてクライアントに届く前のストレステストまで。" },
+    ],
+    cta: "Instagramでフォロー @vsaifoundry",
+  },
+  founding: {
+    secTitle: "創業チーム",
+    statement: "自らの手で築くエンジニア。",
+    aside: "私たちが届けるすべてのシステムを、実際に構築・テスト・導入するチームです。",
+    label: "創業チーム",
+    people: [
       { name: "Kaviraj", role: "AIシステムエンジニア",
         bio: "AIシステムエンジニア。Kavirajは設計図を動くシステムへと変えます、クライアントのオペレーションを支える自動化の構築・テスト・導入を担います。" },
     ],
@@ -1226,7 +1254,7 @@ const fr: Dict = {
   nav: {
     home: "Accueil", work: "Nos réalisations", showcase: "Vitrine", services: "Services",
     process: "Processus", statistics: "Les chiffres", pricing: "Tarifs", faq: "FAQ",
-    team: "Équipe", advisors: "Conseillers", reviews: "Avis clients", labs: "AI Forge",
+    team: "Équipe", founding: "Équipe fondatrice", advisors: "Conseillers", reviews: "Avis clients", labs: "AI Forge",
     audit: "Réserver un audit", contact: "Contact",
   },
   common: {
@@ -1402,8 +1430,15 @@ const fr: Dict = {
         bio: "Fondateur et CEO de V's AI Foundry. Vincent pilote chaque mission de bout en bout, l'audit, le plan et le déploiement final passent tous par sa relecture avant livraison." },
       { name: "Trisha Fong Muthu", role: "Cofondatrice",
         bio: "Cofondatrice de V's AI Foundry, elle façonne le fonctionnement de la foundry en coulisses, des opérations à l'expérience client." },
-      { name: "Shaktheish", role: "Ingénieur systèmes IA",
-        bio: "Ingénieur systèmes IA. Shaktheish construit et valide les systèmes de production dans l'AI Forge, flux d'automatisation, intégrations et tests de charge avant toute livraison client." },
+    ],
+    cta: "Suivez-nous sur Instagram @vsaifoundry",
+  },
+  founding: {
+    secTitle: "Équipe fondatrice",
+    statement: "Les ingénieurs qui la construisent.",
+    aside: "L'équipe de terrain qui construit, teste et livre chacun de nos systèmes.",
+    label: "Équipe fondatrice",
+    people: [
       { name: "Kaviraj", role: "Ingénieur systèmes IA",
         bio: "Ingénieur systèmes IA. Kaviraj transforme les plans en systèmes opérationnels, il construit, teste et déploie les automatisations qui font tourner les opérations de nos clients." },
     ],

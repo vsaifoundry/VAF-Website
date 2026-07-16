@@ -8,8 +8,10 @@ import { useLang } from "@/lib/i18n";
 const TEAM_META: { photo: string | null; variant: number }[] = [
   { photo: "/img/vincent.png", variant: 0 },
   { photo: "/img/trisha.png", variant: 1 },
-  { photo: "/img/shaktheish.jpg", variant: 2 },
-  { photo: "/img/kaviraj.jpg", variant: 3 },
+];
+
+const FOUNDING_META: { photo: string | null; variant: number }[] = [
+  { photo: "/img/kaviraj.jpg", variant: 0 },
 ];
 
 const ADVISOR_META: { photo: string | null; variant: number }[] = [
@@ -104,6 +106,21 @@ export function Team() {
   );
 }
 
+export function FoundingTeam() {
+  const { t } = useLang();
+  const people: Person[] = t.founding.people.map((p, i) => ({ ...p, ...FOUNDING_META[i] }));
+  return (
+    <section className="section" id="founding">
+      <div className="container">
+        <h2 className="sec-title reveal">{t.founding.secTitle}</h2>
+        <SectionIntro num="009" statement={t.founding.statement} aside={t.founding.aside} />
+        <PersonCarousel label={t.founding.label} people={people} fallbackBust />
+        <SecFoot active={8} text={t.founding.cta} to={INSTAGRAM} external />
+      </div>
+    </section>
+  );
+}
+
 export function Advisors() {
   const { t } = useLang();
   const people: Person[] = t.advisors.people.map((p, i) => ({ ...p, ...ADVISOR_META[i] }));
@@ -111,7 +128,7 @@ export function Advisors() {
     <section className="section" id="advisors">
       <div className="container">
         <h2 className="sec-title reveal">{t.advisors.secTitle}</h2>
-        <SectionIntro num="009" statement={t.advisors.statement} aside={t.advisors.aside} />
+        <SectionIntro num="010" statement={t.advisors.statement} aside={t.advisors.aside} />
         <PersonCarousel label={t.advisors.label} people={people} />
 
         <div className="partners-row reveal">
@@ -127,7 +144,7 @@ export function Advisors() {
           ))}
         </div>
 
-        <SecFoot active={8} text={t.advisors.cta} to="contact" />
+        <SecFoot active={9} text={t.advisors.cta} to="contact" />
       </div>
     </section>
   );

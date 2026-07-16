@@ -8,7 +8,7 @@ import type { Dict } from "@/data/translations";
 
 const LINK_IDS = [
   "work", "showcase", "services", "process", "statistics", "pricing",
-  "faq", "team", "advisors", "reviews", "labs", "audit",
+  "faq", "team", "founding", "advisors", "reviews", "labs", "audit",
 ] as const;
 
 export function BrandBand() {
