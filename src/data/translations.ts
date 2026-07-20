@@ -13,7 +13,7 @@ const en = {
     home: "Home", work: "Our Work", showcase: "Showcase", services: "Services",
     process: "Process", statistics: "Statistics", pricing: "Pricing", faq: "FAQ",
     team: "Team", founding: "Founding Team", advisors: "Advisors", reviews: "Reviews", labs: "AI Forge",
-    audit: "Book Audit", contact: "Contact", crossborder: "Crossborder",
+    audit: "Book Audit", contact: "Contact", crossborder: "Cross-border",
   },
   common: {
     bookCall: "Book a Free Call",
@@ -1669,12 +1669,12 @@ export type JBDict = {
 
 export const JAPAN_BRIDGE: Record<Lang, JBDict> = {
   en: {
-    secTitle: "Crossborder",
-    statement: "Flagship Crossborder Services.",
+    secTitle: "Cross-border",
+    statement: "Flagship Cross-border Services.",
     aside: "Malaysia-Japan first, with more corridors to follow.",
-    cta: "Register your interest for crossborder support",
+    cta: "Register your interest for cross-border support",
     kicker: "Early interest",
-    title: "Flagship Crossborder Services",
+    title: "Flagship Cross-border Services",
     intro1: "V's AI Foundry is preparing practical support for people and businesses navigating communication, market entry, and cross-border opportunities between Malaysia and Japan alongside other countries.",
     intro2: "Register your interest and tell us what you need help with.",
     formTitle: "Register Interest",
