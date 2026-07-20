@@ -13,7 +13,7 @@ const en = {
     home: "Home", work: "Our Work", showcase: "Showcase", services: "Services",
     process: "Process", statistics: "Statistics", pricing: "Pricing", faq: "FAQ",
     team: "Team", founding: "Founding Team", advisors: "Advisors", reviews: "Reviews", labs: "AI Forge",
-    audit: "Book Audit", contact: "Contact",
+    audit: "Book Audit", contact: "Contact", japanBridge: "Malaysia-Japan",
   },
   common: {
     bookCall: "Book a Free Call",
@@ -325,7 +325,7 @@ const ms: Dict = {
     home: "Laman Utama", work: "Hasil Kerja", showcase: "Pameran", services: "Perkhidmatan",
     process: "Proses", statistics: "Statistik", pricing: "Harga", faq: "Soalan Lazim",
     team: "Pasukan", founding: "Pasukan Pengasas", advisors: "Penasihat", reviews: "Ulasan", labs: "AI Forge",
-    audit: "Tempah Audit", contact: "Hubungi",
+    audit: "Tempah Audit", contact: "Hubungi", japanBridge: "Malaysia-Jepun",
   },
   common: {
     bookCall: "Tempah Panggilan Percuma",
@@ -635,7 +635,7 @@ const zh: Dict = {
     home: "首页", work: "我们的作品", showcase: "案例展示", services: "服务",
     process: "流程", statistics: "数据", pricing: "价格", faq: "常见问题",
     team: "团队", founding: "创始团队", advisors: "顾问", reviews: "客户评价", labs: "AI Forge",
-    audit: "预约诊断", contact: "联系我们",
+    audit: "预约诊断", contact: "联系我们", japanBridge: "马来西亚-日本",
   },
   common: {
     bookCall: "预约免费通话",
@@ -945,7 +945,7 @@ const ja: Dict = {
     home: "ホーム", work: "実績", showcase: "ショーケース", services: "サービス",
     process: "プロセス", statistics: "数字で見る", pricing: "料金", faq: "よくある質問",
     team: "チーム", founding: "創業チーム", advisors: "アドバイザー", reviews: "お客様の声", labs: "AI Forge",
-    audit: "診断予約", contact: "お問い合わせ",
+    audit: "診断予約", contact: "お問い合わせ", japanBridge: "マレーシア・日本",
   },
   common: {
     bookCall: "無料相談を予約",
@@ -1255,7 +1255,7 @@ const fr: Dict = {
     home: "Accueil", work: "Nos réalisations", showcase: "Vitrine", services: "Services",
     process: "Processus", statistics: "Les chiffres", pricing: "Tarifs", faq: "FAQ",
     team: "Équipe", founding: "Équipe fondatrice", advisors: "Conseillers", reviews: "Avis clients", labs: "AI Forge",
-    audit: "Réserver un audit", contact: "Contact",
+    audit: "Réserver un audit", contact: "Contact", japanBridge: "Malaisie-Japon",
   },
   common: {
     bookCall: "Réserver un appel gratuit",
@@ -1650,5 +1650,111 @@ export const CHATBOT: Record<Lang, ChatbotDict> = {
       process: "Quatre étapes : 1) DM « AUDIT » à @vsaifoundry, 2) votre session d'audit de 90 minutes, 3) réception de votre plan, 4) construction, tests dans l'AI Forge et déploiement. Le WA Starter Bot demande ~2 semaines, le WA Smart System ~3 semaines ; les projets sur mesure sont cadrés après l'audit.",
       contact: "Vous pouvez nous joindre sur WhatsApp ou Telegram au +60 11-3300 6972, par e-mail à forge@vsaifoundry.com, ou en DM à @vsaifoundry sur Instagram (envoyez le mot AUDIT pour commencer). Le formulaire de contact en bas de page fonctionne aussi, nous répondons sous 24 heures.",
     },
+  },
+};
+
+/* ====================================================================
+   Malaysia-Japan Bridge page (/japan-bridge) strings
+   ==================================================================== */
+export type JBDict = {
+  kicker: string; title: string; intro1: string; intro2: string;
+  formTitle: string; name: string; email: string;
+  basedLabel: string; based: string[];
+  helpLabel: string; help: string[];
+  message: string; company: string; whatsapp: string; lineId: string;
+  contactLabel: string; contact: string[];
+  consent: string; submit: string; success: string; back: string;
+};
+
+export const JAPAN_BRIDGE: Record<Lang, JBDict> = {
+  en: {
+    kicker: "Early interest",
+    title: "Malaysia-Japan Business Support",
+    intro1: "V's AI Foundry is preparing practical support for people and businesses navigating communication, market entry, and cross-border opportunities between Malaysia and Japan.",
+    intro2: "Register your interest and tell us what you need help with.",
+    formTitle: "Register Interest",
+    name: "Full Name *", email: "Email Address *",
+    basedLabel: "I am based in *", based: ["Malaysia", "Japan", "Other"],
+    helpLabel: "I need help with *",
+    help: ["Business communication", "Market entry", "Company setup coordination", "Finding the right professional support", "Other"],
+    message: "Briefly tell us what you are trying to do *",
+    company: "Company Name (optional)", whatsapp: "WhatsApp Number (optional)", lineId: "LINE ID (optional)",
+    contactLabel: "Preferred contact method", contact: ["Email", "WhatsApp", "LINE"],
+    consent: "I agree that V's AI Foundry may contact me regarding my enquiry.",
+    submit: "Register Interest",
+    success: "Thank you. We have received your interest and will contact you soon.",
+    back: "Back to main site",
+  },
+  ms: {
+    kicker: "Minat awal",
+    title: "Sokongan Perniagaan Malaysia-Jepun",
+    intro1: "V's AI Foundry sedang menyediakan sokongan praktikal untuk individu dan perniagaan yang mengharungi komunikasi, kemasukan pasaran, dan peluang rentas sempadan antara Malaysia dan Jepun.",
+    intro2: "Daftarkan minat anda dan beritahu kami apa yang anda perlukan.",
+    formTitle: "Daftar Minat",
+    name: "Nama Penuh *", email: "Alamat E-mel *",
+    basedLabel: "Saya berpangkalan di *", based: ["Malaysia", "Jepun", "Lain-lain"],
+    helpLabel: "Saya perlukan bantuan dengan *",
+    help: ["Komunikasi perniagaan", "Kemasukan pasaran", "Koordinasi penubuhan syarikat", "Mencari sokongan profesional yang sesuai", "Lain-lain"],
+    message: "Ceritakan secara ringkas apa yang anda cuba lakukan *",
+    company: "Nama Syarikat (pilihan)", whatsapp: "Nombor WhatsApp (pilihan)", lineId: "ID LINE (pilihan)",
+    contactLabel: "Kaedah hubungan pilihan", contact: ["E-mel", "WhatsApp", "LINE"],
+    consent: "Saya bersetuju bahawa V's AI Foundry boleh menghubungi saya berkenaan pertanyaan ini.",
+    submit: "Daftar Minat",
+    success: "Terima kasih. Kami telah menerima minat anda dan akan menghubungi anda tidak lama lagi.",
+    back: "Kembali ke laman utama",
+  },
+  zh: {
+    kicker: "意向登记",
+    title: "马来西亚-日本商务支持",
+    intro1: "V's AI Foundry 正在为在马来西亚与日本之间开展沟通、市场进入及跨境业务的个人与企业筹备实用支持。",
+    intro2: "登记您的意向，告诉我们您需要哪方面的帮助。",
+    formTitle: "登记意向",
+    name: "全名 *", email: "电子邮箱 *",
+    basedLabel: "我目前所在地 *", based: ["马来西亚", "日本", "其他"],
+    helpLabel: "我需要以下方面的帮助 *",
+    help: ["商务沟通", "市场进入", "公司设立协调", "寻找合适的专业支持", "其他"],
+    message: "简单说明您想做什么 *",
+    company: "公司名称（选填）", whatsapp: "WhatsApp 号码（选填）", lineId: "LINE ID（选填）",
+    contactLabel: "首选联系方式", contact: ["电子邮件", "WhatsApp", "LINE"],
+    consent: "我同意 V's AI Foundry 就我的咨询与我联系。",
+    submit: "登记意向",
+    success: "谢谢。我们已收到您的意向，会尽快与您联系。",
+    back: "返回主站",
+  },
+  ja: {
+    kicker: "先行登録",
+    title: "マレーシア・日本ビジネスサポート",
+    intro1: "V's AI Foundryは、マレーシアと日本の間でのコミュニケーション、市場参入、越境ビジネスに取り組む個人・企業のための実践的なサポートを準備しています。",
+    intro2: "ご関心をご登録のうえ、必要なサポートをお聞かせください。",
+    formTitle: "興味を登録",
+    name: "氏名 *", email: "メールアドレス *",
+    basedLabel: "拠点 *", based: ["マレーシア", "日本", "その他"],
+    helpLabel: "サポートが必要な分野 *",
+    help: ["ビジネスコミュニケーション", "市場参入", "会社設立のコーディネート", "適切な専門家探し", "その他"],
+    message: "取り組みたいことを簡単にお聞かせください *",
+    company: "会社名（任意）", whatsapp: "WhatsApp番号（任意）", lineId: "LINE ID（任意）",
+    contactLabel: "希望する連絡方法", contact: ["メール", "WhatsApp", "LINE"],
+    consent: "V's AI Foundryが本件についてご連絡することに同意します。",
+    submit: "興味を登録",
+    success: "ありがとうございます。ご関心を受け付けました。追ってご連絡いたします。",
+    back: "メインサイトへ戻る",
+  },
+  fr: {
+    kicker: "Intérêt anticipé",
+    title: "Accompagnement d'affaires Malaisie-Japon",
+    intro1: "V's AI Foundry prépare un accompagnement concret pour les personnes et entreprises qui naviguent entre la Malaisie et le Japon : communication, entrée sur le marché et opportunités transfrontalières.",
+    intro2: "Enregistrez votre intérêt et dites-nous ce dont vous avez besoin.",
+    formTitle: "Enregistrer mon intérêt",
+    name: "Nom complet *", email: "Adresse e-mail *",
+    basedLabel: "Je suis basé(e) *", based: ["Malaisie", "Japon", "Autre"],
+    helpLabel: "J'ai besoin d'aide pour *",
+    help: ["Communication d'affaires", "Entrée sur le marché", "Coordination de création de société", "Trouver le bon accompagnement professionnel", "Autre"],
+    message: "Décrivez brièvement ce que vous cherchez à faire *",
+    company: "Nom de la société (optionnel)", whatsapp: "Numéro WhatsApp (optionnel)", lineId: "ID LINE (optionnel)",
+    contactLabel: "Moyen de contact préféré", contact: ["E-mail", "WhatsApp", "LINE"],
+    consent: "J'accepte que V's AI Foundry me contacte au sujet de ma demande.",
+    submit: "Enregistrer mon intérêt",
+    success: "Merci. Nous avons bien reçu votre intérêt et vous contacterons prochainement.",
+    back: "Retour au site principal",
   },
 };

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { ScrollLink, InstagramIcon } from "./ui";
 import { INSTAGRAM } from "@/lib/config";
 import { useLang, LANGS } from "@/lib/i18n";
@@ -46,7 +47,7 @@ export function ScrollProgress() {
   );
 }
 
-function LangSelector() {
+export function LangSelector() {
   const { lang, setLang } = useLang();
   const [open, setOpen] = useState(false);
 
@@ -156,6 +157,10 @@ export function Header({
                 {t.nav[id as keyof Dict["nav"]]}
               </ScrollLink>
             ))}
+            <Link to="/japan-bridge" onClick={() => setMenuOpen(false)}>
+              <em>{String(NAV_IDS.length + 1).padStart(2, "0")}</em>
+              {t.nav.japanBridge}
+            </Link>
           </div>
           <div className="menu-side">
             <p className="menu-tag">{t.common.menuTag}</p>
