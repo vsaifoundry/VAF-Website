@@ -128,7 +128,7 @@ export function Numbers() {
             </article>
             <article className="card stat-partners reveal">
               <span>{n.partners}</span>
-              <span className="ip-list">ManyChat · n8n · Airtable · Notion</span>
+              <span className="ip-list">ManyChat · n8n · Sakana AI · Airtable · Notion</span>
               <svg className="git-ic" viewBox="0 0 24 24">
                 <circle cx="6" cy="6" r="2.6" fill="none" stroke="currentColor" strokeWidth="1.6" />
                 <circle cx="6" cy="18" r="2.6" fill="none" stroke="currentColor" strokeWidth="1.6" />

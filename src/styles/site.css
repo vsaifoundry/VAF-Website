@@ -2035,8 +2035,8 @@ html[data-theme="dark"] .vaf-chat{box-shadow:0 40px 90px -30px rgba(0,0,0,.8)}
     box-shadow:none;border-left:0;
   }
   .menu-links{display:flex;flex-direction:column;gap:0}
-  .menu-links a{font-size:17px;gap:12px;padding:11px 0}
-  .menu-links a em{font-size:11px;min-width:22px}
+  .menu-links a{font-size:clamp(18px,2.5vh,25px);gap:14px;padding:9px 0}
+  .menu-links a em{font-size:13px;min-width:30px}
   .menu-side{gap:16px}
   .menu-tag{font-size:13px;line-height:1.5}
   .menu-side .btn{width:100%;justify-content:center}
@@ -2141,7 +2141,7 @@ html[data-theme="dark"] .vaf-chat{box-shadow:0 40px 90px -30px rgba(0,0,0,.8)}
 
   /* tighten the drawer list further for short viewports */
   .menu-inner{padding:70px 20px 24px}
-  .menu-links a{font-size:16px;padding:10px 0}
+  .menu-links a{font-size:clamp(18px,2.3vh,22px);padding:8px 0}
 
   .clock-row{grid-template-columns:1fr}
   .stat-side{flex-direction:column}

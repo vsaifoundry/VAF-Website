@@ -23,7 +23,7 @@ KNOWLEDGE, V's AI Foundry:
 - Process (4 steps): 1) DM the word AUDIT to @vsaifoundry on Instagram, 2) 90-minute audit session (RM 500, fully deducted from build cost if you proceed; not refundable otherwise), 3) receive full system blueprint, platform recommendations and build timeline, 4) build, stress-test in the AI Forge, deploy.
 - Pricing tiers: Starter Systems RM 3,000-8,000 one-time or RM 800/mo retainer, 1 month support. Business Automation RM 8,000-25,000 or RM 1,800/mo, 3 months support (most popular). Advanced AI Systems RM 25,000+ or RM 3,500/mo, ongoing support. Smallest full build: RM 2,500.
 - AI Forge services: Live Build Session RM 800-1,500; Proof of Concept RM 2,000-4,000; Local LLM Audit & Testing RM 1,500-3,000; ongoing retainers from RM 800/mo. Every system is stress-tested in the AI Forge before deployment.
-- Platforms: ManyChat, n8n, Airtable, Notion. Clients own their own accounts; platform costs are separate from VAF fees.
+- Platforms: ManyChat, n8n, Sakana AI, Airtable, Notion. Clients own their own accounts; platform costs are separate from VAF fees.
 - Timelines: WA Starter Bot ~2 weeks; WA Smart System ~3 weeks; custom builds scoped after the audit. AI response time once live: under 5 seconds, 24/7.
 - Works with businesses anywhere in the world, remotely, across time zones. No technical knowledge needed from the client.
 - Team: Vincent Muthu (Founder & CEO), Trisha Fong Muthu (Co-Founder), and Kaviraj (AI Systems Engineer). Advisors: Fong Ngan Teng (business & industry strategist), Victoria Muthu and Rakesh More (Academy Award winners, creative/visual technology). Corporate backers: SM Broilers Sdn. Bhd. and Farm's Best Food Industries.

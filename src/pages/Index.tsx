@@ -44,9 +44,9 @@ const Index = () => {
           <Numbers />
           <Pricing />
           <Faq />
+          <Advisors />
           <Team />
           <FoundingTeam />
-          <Advisors />
           <Reviews />
           <Forge />
           <Audit />
