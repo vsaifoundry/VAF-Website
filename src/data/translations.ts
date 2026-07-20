@@ -13,7 +13,7 @@ const en = {
     home: "Home", work: "Our Work", showcase: "Showcase", services: "Services",
     process: "Process", statistics: "Statistics", pricing: "Pricing", faq: "FAQ",
     team: "Team", founding: "Founding Team", advisors: "Advisors", reviews: "Reviews", labs: "AI Forge",
-    audit: "Book Audit", contact: "Contact", japanBridge: "Malaysia-Japan",
+    audit: "Book Audit", contact: "Contact", crossborder: "Crossborder",
   },
   common: {
     bookCall: "Book a Free Call",
@@ -325,7 +325,7 @@ const ms: Dict = {
     home: "Laman Utama", work: "Hasil Kerja", showcase: "Pameran", services: "Perkhidmatan",
     process: "Proses", statistics: "Statistik", pricing: "Harga", faq: "Soalan Lazim",
     team: "Pasukan", founding: "Pasukan Pengasas", advisors: "Penasihat", reviews: "Ulasan", labs: "AI Forge",
-    audit: "Tempah Audit", contact: "Hubungi", japanBridge: "Malaysia-Jepun",
+    audit: "Tempah Audit", contact: "Hubungi", crossborder: "Rentas Sempadan",
   },
   common: {
     bookCall: "Tempah Panggilan Percuma",
@@ -635,7 +635,7 @@ const zh: Dict = {
     home: "首页", work: "我们的作品", showcase: "案例展示", services: "服务",
     process: "流程", statistics: "数据", pricing: "价格", faq: "常见问题",
     team: "团队", founding: "创始团队", advisors: "顾问", reviews: "客户评价", labs: "AI Forge",
-    audit: "预约诊断", contact: "联系我们", japanBridge: "马来西亚-日本",
+    audit: "预约诊断", contact: "联系我们", crossborder: "跨境服务",
   },
   common: {
     bookCall: "预约免费通话",
@@ -945,7 +945,7 @@ const ja: Dict = {
     home: "ホーム", work: "実績", showcase: "ショーケース", services: "サービス",
     process: "プロセス", statistics: "数字で見る", pricing: "料金", faq: "よくある質問",
     team: "チーム", founding: "創業チーム", advisors: "アドバイザー", reviews: "お客様の声", labs: "AI Forge",
-    audit: "診断予約", contact: "お問い合わせ", japanBridge: "マレーシア・日本",
+    audit: "診断予約", contact: "お問い合わせ", crossborder: "越境サービス",
   },
   common: {
     bookCall: "無料相談を予約",
@@ -1255,7 +1255,7 @@ const fr: Dict = {
     home: "Accueil", work: "Nos réalisations", showcase: "Vitrine", services: "Services",
     process: "Processus", statistics: "Les chiffres", pricing: "Tarifs", faq: "FAQ",
     team: "Équipe", founding: "Équipe fondatrice", advisors: "Conseillers", reviews: "Avis clients", labs: "AI Forge",
-    audit: "Réserver un audit", contact: "Contact", japanBridge: "Malaisie-Japon",
+    audit: "Réserver un audit", contact: "Contact", crossborder: "Transfrontalier",
   },
   common: {
     bookCall: "Réserver un appel gratuit",
@@ -1657,6 +1657,7 @@ export const CHATBOT: Record<Lang, ChatbotDict> = {
    Malaysia-Japan Bridge page (/japan-bridge) strings
    ==================================================================== */
 export type JBDict = {
+  secTitle: string; statement: string; aside: string; cta: string;
   kicker: string; title: string; intro1: string; intro2: string;
   formTitle: string; name: string; email: string;
   basedLabel: string; based: string[];
@@ -1668,9 +1669,13 @@ export type JBDict = {
 
 export const JAPAN_BRIDGE: Record<Lang, JBDict> = {
   en: {
+    secTitle: "Crossborder",
+    statement: "Flagship Crossborder Services.",
+    aside: "Malaysia-Japan first, with more corridors to follow.",
+    cta: "Register your interest for crossborder support",
     kicker: "Early interest",
-    title: "Malaysia-Japan Business Support",
-    intro1: "V's AI Foundry is preparing practical support for people and businesses navigating communication, market entry, and cross-border opportunities between Malaysia and Japan.",
+    title: "Flagship Crossborder Services",
+    intro1: "V's AI Foundry is preparing practical support for people and businesses navigating communication, market entry, and cross-border opportunities between Malaysia and Japan alongside other countries.",
     intro2: "Register your interest and tell us what you need help with.",
     formTitle: "Register Interest",
     name: "Full Name *", email: "Email Address *",
@@ -1686,9 +1691,13 @@ export const JAPAN_BRIDGE: Record<Lang, JBDict> = {
     back: "Back to main site",
   },
   ms: {
+    secTitle: "Rentas Sempadan",
+    statement: "Perkhidmatan Rentas Sempadan Utama.",
+    aside: "Bermula dengan Malaysia-Jepun, koridor lain akan menyusul.",
+    cta: "Daftarkan minat anda untuk sokongan rentas sempadan",
     kicker: "Minat awal",
-    title: "Sokongan Perniagaan Malaysia-Jepun",
-    intro1: "V's AI Foundry sedang menyediakan sokongan praktikal untuk individu dan perniagaan yang mengharungi komunikasi, kemasukan pasaran, dan peluang rentas sempadan antara Malaysia dan Jepun.",
+    title: "Perkhidmatan Rentas Sempadan Utama",
+    intro1: "V's AI Foundry sedang menyediakan sokongan praktikal untuk individu dan perniagaan yang mengharungi komunikasi, kemasukan pasaran, dan peluang rentas sempadan antara Malaysia dan Jepun serta negara-negara lain.",
     intro2: "Daftarkan minat anda dan beritahu kami apa yang anda perlukan.",
     formTitle: "Daftar Minat",
     name: "Nama Penuh *", email: "Alamat E-mel *",
@@ -1704,9 +1713,13 @@ export const JAPAN_BRIDGE: Record<Lang, JBDict> = {
     back: "Kembali ke laman utama",
   },
   zh: {
+    secTitle: "跨境服务",
+    statement: "旗舰跨境服务。",
+    aside: "从马来西亚-日本开始，更多市场即将推出。",
+    cta: "登记您的跨境支持意向",
     kicker: "意向登记",
-    title: "马来西亚-日本商务支持",
-    intro1: "V's AI Foundry 正在为在马来西亚与日本之间开展沟通、市场进入及跨境业务的个人与企业筹备实用支持。",
+    title: "旗舰跨境服务",
+    intro1: "V's AI Foundry 正在为在马来西亚与日本及其他国家之间开展沟通、市场进入及跨境业务的个人与企业筹备实用支持。",
     intro2: "登记您的意向，告诉我们您需要哪方面的帮助。",
     formTitle: "登记意向",
     name: "全名 *", email: "电子邮箱 *",
@@ -1722,9 +1735,13 @@ export const JAPAN_BRIDGE: Record<Lang, JBDict> = {
     back: "返回主站",
   },
   ja: {
+    secTitle: "越境サービス",
+    statement: "フラッグシップ越境サービス。",
+    aside: "マレーシア・日本を皮切りに、他の国へも拡大予定。",
+    cta: "越境サポートへの関心をご登録ください",
     kicker: "先行登録",
-    title: "マレーシア・日本ビジネスサポート",
-    intro1: "V's AI Foundryは、マレーシアと日本の間でのコミュニケーション、市場参入、越境ビジネスに取り組む個人・企業のための実践的なサポートを準備しています。",
+    title: "フラッグシップ越境サービス",
+    intro1: "V's AI Foundryは、マレーシアと日本、さらにその他の国々との間でのコミュニケーション、市場参入、越境ビジネスに取り組む個人・企業のための実践的なサポートを準備しています。",
     intro2: "ご関心をご登録のうえ、必要なサポートをお聞かせください。",
     formTitle: "興味を登録",
     name: "氏名 *", email: "メールアドレス *",
@@ -1740,9 +1757,13 @@ export const JAPAN_BRIDGE: Record<Lang, JBDict> = {
     back: "メインサイトへ戻る",
   },
   fr: {
+    secTitle: "Transfrontalier",
+    statement: "Services transfrontaliers phares.",
+    aside: "Malaisie-Japon d'abord, d'autres corridors suivront.",
+    cta: "Enregistrez votre intérêt pour l'accompagnement transfrontalier",
     kicker: "Intérêt anticipé",
-    title: "Accompagnement d'affaires Malaisie-Japon",
-    intro1: "V's AI Foundry prépare un accompagnement concret pour les personnes et entreprises qui naviguent entre la Malaisie et le Japon : communication, entrée sur le marché et opportunités transfrontalières.",
+    title: "Services transfrontaliers phares",
+    intro1: "V's AI Foundry prépare un accompagnement concret pour les personnes et entreprises qui naviguent entre la Malaisie, le Japon et d'autres pays : communication, entrée sur le marché et opportunités transfrontalières.",
     intro2: "Enregistrez votre intérêt et dites-nous ce dont vous avez besoin.",
     formTitle: "Enregistrer mon intérêt",
     name: "Nom complet *", email: "Adresse e-mail *",

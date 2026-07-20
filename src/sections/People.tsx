@@ -98,9 +98,9 @@ export function Team() {
     <section className="section" id="team">
       <div className="container">
         <h2 className="sec-title reveal">{t.team.secTitle}</h2>
-        <SectionIntro num="009" statement={t.team.statement} aside={t.team.aside} />
+        <SectionIntro num="010" statement={t.team.statement} aside={t.team.aside} />
         <PersonCarousel label={t.team.label} people={people} fallbackBust />
-        <SecFoot active={8} text={t.team.cta} to={INSTAGRAM} external />
+        <SecFoot active={9} text={t.team.cta} to={INSTAGRAM} external />
       </div>
     </section>
   );
@@ -113,9 +113,9 @@ export function FoundingTeam() {
     <section className="section" id="founding">
       <div className="container">
         <h2 className="sec-title reveal">{t.founding.secTitle}</h2>
-        <SectionIntro num="010" statement={t.founding.statement} aside={t.founding.aside} />
+        <SectionIntro num="011" statement={t.founding.statement} aside={t.founding.aside} />
         <PersonCarousel label={t.founding.label} people={people} fallbackBust />
-        <SecFoot active={9} text={t.founding.cta} to={INSTAGRAM} external />
+        <SecFoot active={10} text={t.founding.cta} to={INSTAGRAM} external />
       </div>
     </section>
   );
@@ -128,7 +128,7 @@ export function Advisors() {
     <section className="section" id="advisors">
       <div className="container">
         <h2 className="sec-title reveal">{t.advisors.secTitle}</h2>
-        <SectionIntro num="008" statement={t.advisors.statement} aside={t.advisors.aside} />
+        <SectionIntro num="009" statement={t.advisors.statement} aside={t.advisors.aside} />
         <PersonCarousel label={t.advisors.label} people={people} />
 
         <div className="partners-row reveal">
@@ -144,7 +144,7 @@ export function Advisors() {
           ))}
         </div>
 
-        <SecFoot active={7} text={t.advisors.cta} to="contact" />
+        <SecFoot active={8} text={t.advisors.cta} to="contact" />
       </div>
     </section>
   );

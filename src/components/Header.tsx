@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import { ScrollLink, InstagramIcon } from "./ui";
 import { INSTAGRAM } from "@/lib/config";
 import { useLang, LANGS } from "@/lib/i18n";
 import type { Dict } from "@/data/translations";
 
 const NAV_IDS = [
-  "home", "work", "showcase", "services", "process", "statistics", "pricing",
+  "home", "work", "showcase", "crossborder", "services", "process", "statistics", "pricing",
   "faq", "advisors", "team", "founding", "reviews", "labs", "audit", "contact",
 ] as const;
 
@@ -157,10 +156,6 @@ export function Header({
                 {t.nav[id as keyof Dict["nav"]]}
               </ScrollLink>
             ))}
-            <Link to="/japan-bridge" onClick={() => setMenuOpen(false)}>
-              <em>{String(NAV_IDS.length + 1).padStart(2, "0")}</em>
-              {t.nav.japanBridge}
-            </Link>
           </div>
           <div className="menu-side">
             <p className="menu-tag">{t.common.menuTag}</p>

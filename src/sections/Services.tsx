@@ -18,7 +18,7 @@ export function Services() {
     <section className="section" id="services">
       <div className="container">
         <h2 className="sec-title reveal">{t.services.secTitle}</h2>
-        <SectionIntro num="003" statement={t.services.statement} aside={t.services.aside} />
+        <SectionIntro num="004" statement={t.services.statement} aside={t.services.aside} />
 
         <div className="services-row reveal">
           {t.services.items.map((s, i) => (
@@ -56,7 +56,7 @@ export function Services() {
           </aside>
         </div>
 
-        <SecFoot active={2} text={t.services.cta} to="pricing" />
+        <SecFoot active={3} text={t.services.cta} to="pricing" />
       </div>
     </section>
   );

@@ -12,7 +12,7 @@ export function Forge() {
     <section className="section" id="labs">
       <div className="container">
         <h2 className="sec-title reveal">{t.forge.secTitle}</h2>
-        <SectionIntro num="012" statement={t.forge.statement} aside={t.forge.aside} />
+        <SectionIntro num="013" statement={t.forge.statement} aside={t.forge.aside} />
 
         <div className="labs-grid">
           {t.forge.items.map((l, i) => (
@@ -27,7 +27,7 @@ export function Forge() {
           ))}
         </div>
 
-        <SecFoot active={11} text={t.forge.cta} to="audit" />
+        <SecFoot active={12} text={t.forge.cta} to="audit" />
       </div>
     </section>
   );

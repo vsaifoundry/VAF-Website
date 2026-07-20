@@ -57,13 +57,13 @@ export function Pricing() {
     <section className="section" id="pricing">
       <div className="container">
         <h2 className="sec-title reveal">{t.pricing.secTitle}</h2>
-        <SectionIntro num="006" statement={t.pricing.statement} aside={t.pricing.aside} />
+        <SectionIntro num="007" statement={t.pricing.statement} aside={t.pricing.aside} />
         <div className="price-rows">
           {PRICE_META.map((meta, i) => (
             <PriceRow key={meta.tone} meta={meta} plan={t.pricing.plans[i]} />
           ))}
         </div>
-        <SecFoot active={5} text={t.pricing.cta} to="contact" />
+        <SecFoot active={6} text={t.pricing.cta} to="contact" />
       </div>
     </section>
   );

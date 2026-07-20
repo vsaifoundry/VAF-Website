@@ -12,7 +12,7 @@ export function Reviews() {
     <section className="section" id="reviews">
       <div className="container">
         <h2 className="sec-title reveal">{t.reviews.secTitle}</h2>
-        <SectionIntro num="011" statement={t.reviews.statement} aside={t.reviews.aside} />
+        <SectionIntro num="012" statement={t.reviews.statement} aside={t.reviews.aside} />
 
         <div className="review-grid reveal">
           <div className="card review-main">
@@ -40,7 +40,7 @@ export function Reviews() {
           </div>
         </div>
 
-        <SecFoot active={10} text={t.reviews.cta} to="contact" />
+        <SecFoot active={11} text={t.reviews.cta} to="contact" />
       </div>
     </section>
   );

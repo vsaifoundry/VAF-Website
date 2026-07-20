@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { StarsCanvas } from "@/components/StarsCanvas";
 import { ScrollLink, ArrowIcon, InstagramIcon, SpinBadge } from "@/components/ui";
 import { makeSubmitHandler, field } from "@/lib/forms";
@@ -8,7 +7,7 @@ import { useLang } from "@/lib/i18n";
 import type { Dict } from "@/data/translations";
 
 const LINK_IDS = [
-  "work", "showcase", "services", "process", "statistics", "pricing",
+  "work", "showcase", "crossborder", "services", "process", "statistics", "pricing",
   "faq", "advisors", "team", "founding", "reviews", "labs", "audit",
 ] as const;
 
@@ -103,7 +102,6 @@ export function Footer() {
             {LINK_IDS.map((to) => (
               <ScrollLink key={to} to={to}>{t.nav[to as keyof Dict["nav"]]}</ScrollLink>
             ))}
-            <Link to="/japan-bridge">{t.nav.japanBridge}</Link>
           </nav>
           <div className="foot-legal">
             <span>{t.common.legal}</span>

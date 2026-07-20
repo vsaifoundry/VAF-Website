@@ -3,6 +3,7 @@ import { Header, ScrollProgress } from "@/components/Header";
 import { Hero } from "@/sections/Hero";
 import { Work } from "@/sections/Work";
 import { Showcase } from "@/sections/Showcase";
+import { Crossborder } from "@/sections/Crossborder";
 import { Services } from "@/sections/Services";
 import { Process } from "@/sections/Process";
 import { Numbers } from "@/sections/Numbers";
@@ -39,6 +40,7 @@ const Index = () => {
           <Hero />
           <Work />
           <Showcase />
+          <Crossborder />
           <Services />
           <Process />
           <Numbers />

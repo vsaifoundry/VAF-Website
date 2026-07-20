@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 import { ScrollLink, ArrowIcon, Ticks } from "./ui";
 
-export const TICKS_TOTAL = 13;
+export const TICKS_TOTAL = 14;
 
 export function SecFoot({
   active, text, to, external,
@@ -14,6 +15,10 @@ export function SecFoot({
           <a className="btn-arrow solid" href={to} target="_blank" rel="noopener" aria-label={text}>
             <ArrowIcon />
           </a>
+        ) : to.startsWith("/") ? (
+          <Link to={to} className="btn-arrow solid" aria-label={text}>
+            <ArrowIcon />
+          </Link>
         ) : (
           <ScrollLink to={to} className="btn-arrow solid" aria-label={text}>
             <ArrowIcon />

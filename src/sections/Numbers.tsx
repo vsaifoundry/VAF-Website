@@ -23,7 +23,7 @@ export function Numbers() {
     <section className="section" id="statistics">
       <div className="container">
         <h2 className="sec-title reveal">{n.secTitle}</h2>
-        <SectionIntro num="005" statement={n.statement} aside={n.aside} />
+        <SectionIntro num="006" statement={n.statement} aside={n.aside} />
 
         <div className="ana-grid">
           <article className="card ana-visual reveal">
@@ -145,7 +145,7 @@ export function Numbers() {
           </div>
         </div>
 
-        <SecFoot active={4} text={n.cta} to="contact" />
+        <SecFoot active={5} text={n.cta} to="contact" />
       </div>
     </section>
   );

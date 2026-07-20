@@ -27,7 +27,7 @@ export function Process() {
     <section className="section" id="process">
       <div className="container">
         <h2 className="sec-title reveal">{t.process.secTitle}</h2>
-        <SectionIntro num="004" statement={t.process.statement} aside={t.process.aside} />
+        <SectionIntro num="005" statement={t.process.statement} aside={t.process.aside} />
 
         <div className="process-grid reveal">
           <div className="proc-vis card" data-tone={TONES[idx]} data-step={idx + 1}>
@@ -68,7 +68,7 @@ export function Process() {
           </div>
         </div>
 
-        <SecFoot active={3} text={t.process.cta} to="faq" />
+        <SecFoot active={4} text={t.process.cta} to="faq" />
       </div>
     </section>
   );

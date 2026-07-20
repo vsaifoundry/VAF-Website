@@ -59,7 +59,7 @@ export function Faq() {
     <section className="section" id="faq">
       <div className="container">
         <h2 className="sec-title reveal">{t.faq.secTitle}</h2>
-        <SectionIntro num="007" statement={t.faq.statement} aside={t.faq.aside} />
+        <SectionIntro num="008" statement={t.faq.statement} aside={t.faq.aside} />
 
         <div className="faq-grid reveal">
           <div className="faq-list">
@@ -84,7 +84,7 @@ export function Faq() {
           </div>
         </div>
 
-        <SecFoot active={6} text={t.faq.cta} to="audit" />
+        <SecFoot active={7} text={t.faq.cta} to="audit" />
       </div>
     </section>
   );
