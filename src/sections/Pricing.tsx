@@ -1,51 +1,46 @@
-import { useState } from "react";
-import { SectionIntro, ScrollLink, CheckIcon } from "@/components/ui";
+import { SectionIntro, ScrollLink, CheckIcon, ArrowIcon } from "@/components/ui";
 import { SecFoot } from "@/components/SecFoot";
 import { StackVis } from "@/components/visuals";
 import { useLang } from "@/lib/i18n";
 import type { Dict } from "@/data/translations";
 
-/* Prices, tones and layout metadata stay constant across languages. */
-const PRICE_META = [
-  { tone: "blue", layers: 2, oneTime: "3,000-8,000", retainer: "800/mo", to: "audit", strongFirst: false },
-  { tone: "yellow", layers: 3, oneTime: "8,000-25,000", retainer: "1,800/mo", to: "audit", strongFirst: true },
-  { tone: "red", layers: 4, oneTime: "25,000+", retainer: "3,500/mo", to: "contact", strongFirst: true },
-];
+/* October 2026 service menu. Prices and tones stay the same in every
+   language; all wording lives in src/data/translations.ts (pricing). */
+const PACKAGES = [
+  { tone: "blue", layers: 1, amount: "349", unit: "month" },
+  { tone: "yellow", layers: 2, amount: "799", unit: "month" },
+  { tone: "red", layers: 3, amount: "1,799", unit: "month" },
+  { tone: "brand", layers: 4, amount: "3,999", unit: "project" },
+] as const;
 
-function PriceRow({
+function PackageRow({
   meta, plan,
-}: { meta: (typeof PRICE_META)[number]; plan: Dict["pricing"]["plans"][number] }) {
+}: { meta: (typeof PACKAGES)[number]; plan: Dict["pricing"]["plans"][number] }) {
   const { t } = useLang();
-  const [retainer, setRetainer] = useState(false);
   return (
-    <div className="price-row reveal" data-tone={meta.tone}>
+    <div className="price-row pkg-row reveal" data-tone={meta.tone}>
       <div className="card p-img">
+        <span className="p-kicker">{plan.kicker}</span>
         <span className="p-name">{plan.name}</span>
         <span className="p-for">{plan.forWho}</span>
         <StackVis layers={meta.layers} />
       </div>
       <div className="card p-price">
         <span className="cell-label">{t.pricing.price}</span>
-        <span className="p-amount">RM&nbsp;<b>{retainer ? meta.retainer : meta.oneTime}</b></span>
-        <label className="switch">
-          <span>{t.pricing.oneTime}</span>
-          <input type="checkbox" checked={retainer} onChange={(e) => setRetainer(e.target.checked)} />
-          <i /><span>{t.pricing.retainer}</span>
-        </label>
+        <span className="p-amount">RM&nbsp;<b>{meta.amount}</b></span>
+        <span className="p-unit">{meta.unit === "month" ? t.pricing.perMonth : t.pricing.perProject}</span>
       </div>
-      <div className="p-mid">
-        <div className="card p-plan"><span className="cell-label">{t.pricing.plan}</span><span className="p-tier">{plan.plan}</span></div>
-        <div className="card p-seats"><span className="cell-label">{t.pricing.support}</span><span className="p-tier">{plan.support}</span></div>
+      <div className="card p-deliver">
+        <span className="cell-label">{t.pricing.deliver}</span>
+        <span className="p-get">{plan.deliverable}</span>
       </div>
       <div className="card p-features">
         <ul>
-          {plan.features.map((f, i) => (
-            <li key={f} className={meta.strongFirst && i === 0 ? "strong" : ""}>{f}</li>
-          ))}
+          {plan.features.map((f) => <li key={f}>{f}</li>)}
         </ul>
       </div>
       <div className="card p-cta">
-        <ScrollLink to={meta.to} className="btn btn-solid"><CheckIcon />{plan.cta}</ScrollLink>
+        <ScrollLink to="contact" className="btn btn-solid"><CheckIcon />{plan.cta}</ScrollLink>
       </div>
     </div>
   );
@@ -53,17 +48,58 @@ function PriceRow({
 
 export function Pricing() {
   const { t } = useLang();
+  const p = t.pricing;
   return (
     <section className="section" id="pricing">
       <div className="container">
-        <h2 className="sec-title reveal">{t.pricing.secTitle}</h2>
-        <SectionIntro num="007" statement={t.pricing.statement} aside={t.pricing.aside} />
+        <h2 className="sec-title reveal">{p.secTitle}</h2>
+        <SectionIntro num="006" statement={p.statement} aside={p.aside} />
+
         <div className="price-rows">
-          {PRICE_META.map((meta, i) => (
-            <PriceRow key={meta.tone} meta={meta} plan={t.pricing.plans[i]} />
+          {PACKAGES.map((meta, i) => (
+            <PackageRow key={meta.tone} meta={meta} plan={p.plans[i]} />
           ))}
         </div>
-        <SecFoot active={6} text={t.pricing.cta} to="contact" />
+
+        <div className="pkg-extra">
+          <div className="card pkg-compare reveal">
+            <h3>{p.compareTitle}</h3>
+            <table>
+              <thead>
+                <tr>{p.compareHead.map((h) => <th key={h} scope="col">{h}</th>)}</tr>
+              </thead>
+              <tbody>
+                {p.compare.map(([name, price, get], i) => (
+                  <tr key={name} data-tone={PACKAGES[i].tone}>
+                    <th scope="row"><i aria-hidden />{name}</th>
+                    <td>{price}</td>
+                    <td>{get}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <div className="pkg-addons">
+            <div className="pkg-addons-head reveal">
+              <h3>{p.addonsTitle}</h3>
+              <p>{p.addonsSub}</p>
+            </div>
+            <div className="pkg-addons-grid">
+              {p.addons.map((a) => (
+                <article key={a.title} className="card pkg-addon reveal">
+                  <h4>{a.title}</h4>
+                  <p>{a.copy}</p>
+                  <ScrollLink to="contact" className="pkg-addon-link">{p.addonCta}<ArrowIcon /></ScrollLink>
+                </article>
+              ))}
+            </div>
+          </div>
+
+          <p className="pkg-fine reveal">{p.fine}</p>
+        </div>
+
+        <SecFoot active={5} text={p.cta} to="contact" />
       </div>
     </section>
   );

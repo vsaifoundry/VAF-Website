@@ -2478,3 +2478,94 @@ html[data-theme="dark"] .cd-chip:hover:not(:disabled){background:#26353D;border-
   .hero-blobs .blob{opacity:.38}
   .blob.b2{opacity:.3}
 }
+
+/* ============================================================
+   PRICING: October 2026 service menu (4 packages, comparison,
+   add-ons). Reuses the price-row layout above.
+   ============================================================ */
+[data-tone="brand"]{--t1:#0057FF;--t2:#3D82FF}
+[data-tone="brand"] .stack i:nth-child(1){background:linear-gradient(160deg,#3D82FF,#0057FF)}
+[data-tone="brand"] .stack i:nth-child(2){background:linear-gradient(160deg,#FFE066,#FFCC00)}
+[data-tone="brand"] .stack i:nth-child(3){background:linear-gradient(160deg,#FF5A75,#FF0033)}
+[data-tone="brand"] .stack i:nth-child(4){background:linear-gradient(160deg,#FFFFFF,#C9D3E6)}
+.price-row[data-tone="brand"]{border-top:3px solid transparent;
+  border-image:linear-gradient(90deg,var(--orange) 0 40%,var(--yellow) 40% 70%,var(--red) 70% 100%) 1 0 0 0}
+.pkg-row .p-img{display:flex;flex-direction:column}
+.p-kicker{
+  position:relative;z-index:2;align-self:flex-start;margin-bottom:12px;
+  font-size:11.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+  color:#fff;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);
+  padding:5px 9px;border-radius:999px;backdrop-filter:blur(4px);
+}
+.pkg-row .p-name{font-size:clamp(22px,1.8vw,28px);line-height:1.15}
+.pkg-row .p-for{font-size:14px;line-height:1.45;max-width:30ch}
+.pkg-row .p-amount b{font-weight:600}
+.p-unit{font-size:14px;color:var(--dim);margin-top:-10px}
+.p-deliver{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:28px 18px;text-align:center}
+.p-get{font-size:clamp(17px,1.35vw,22px);font-weight:500;line-height:1.3;color:var(--text);max-width:16ch}
+.pkg-row .p-features li{font-size:15px;line-height:1.45}
+.pkg-row .p-features li:first-child{color:var(--text);font-weight:500}
+
+.pkg-extra{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px}
+.pkg-compare{padding:30px;grid-row:span 1}
+.pkg-compare h3,.pkg-addons-head h3{font-size:clamp(20px,1.6vw,26px);font-weight:500;letter-spacing:-.01em}
+.pkg-compare table{width:100%;border-collapse:collapse;margin-top:18px;font-size:15px}
+.pkg-compare th,.pkg-compare td{text-align:left;padding:13px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.pkg-compare thead th{font-size:12.5px;font-weight:500;color:var(--dim);text-transform:uppercase;letter-spacing:.06em;padding-top:0}
+.pkg-compare tbody th{font-weight:500;white-space:nowrap}
+.pkg-compare tbody th i{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--t1);margin-right:10px;vertical-align:1px}
+.pkg-compare tbody tr[data-tone="brand"] th i{background:conic-gradient(var(--orange) 0 40%,var(--yellow) 0 70%,var(--red) 0)}
+.pkg-compare td:nth-child(2){white-space:nowrap;font-weight:500;color:var(--orange)}
+.pkg-compare td:last-child{color:var(--muted)}
+.pkg-compare tbody tr:last-child th,.pkg-compare tbody tr:last-child td{border-bottom:0}
+
+.pkg-addons{display:flex;flex-direction:column;gap:12px}
+.pkg-addons-head{padding:4px 4px 2px}
+.pkg-addons-head p{color:var(--dim);font-size:14.5px;margin-top:6px}
+.pkg-addons-grid{display:flex;flex-direction:column;gap:10px;flex:1}
+.pkg-addon{padding:20px 22px;display:flex;flex-direction:column;gap:6px;flex:1}
+.pkg-addon h4{font-size:17px;font-weight:500}
+.pkg-addon p{font-size:14.5px;color:var(--muted);line-height:1.5}
+.pkg-addon-link{display:inline-flex;align-items:center;gap:8px;margin-top:6px;font-size:14px;font-weight:500;color:var(--orange)}
+.pkg-addon-link .ic{width:14px;height:14px;transition:transform .3s var(--ease)}
+.pkg-addon-link:hover .ic{transform:translateX(3px)}
+.pkg-fine{grid-column:1/-1;font-size:13.5px;color:var(--dim);line-height:1.6;max-width:110ch;padding:4px 4px 0}
+
+html[data-theme="dark"] .p-get{color:var(--text)}
+html[data-theme="dark"] .pkg-compare td:nth-child(2){color:var(--orange-2)}
+
+@media (max-width:1080px){
+  .pkg-extra{grid-template-columns:1fr}
+}
+@media (max-width:720px){
+  .pkg-compare{padding:22px 16px}
+  .pkg-compare table{font-size:14px}
+  .pkg-compare th,.pkg-compare td{padding:11px 6px}
+  .pkg-compare tbody th{white-space:normal}
+  .p-deliver{padding:22px 16px}
+}
+/* package stacks sit lower so long names (the 90-Day Makeover) never overlap them */
+.pkg-row .vis-stack .stack{top:73%;width:44%}
+@media (max-width:720px){
+  /* phones: one compact card per package instead of five tall boxes */
+  .pkg-row{grid-template-columns:1fr 1fr;grid-auto-rows:auto;gap:6px;padding:6px}
+  .pkg-row .card{min-height:0}
+  .pkg-row .p-img,.pkg-row .p-features,.pkg-row .p-cta{grid-column:1/-1}
+  .pkg-row .p-img{min-height:200px;padding:20px}
+  .pkg-row .p-name,.pkg-row .p-for{max-width:64%}
+  .pkg-row .vis-stack .stack{left:auto;right:-4%;top:auto;bottom:10%;transform:none;width:36%}
+  .pkg-row .vis-stack .glow3d{left:auto;right:4%;transform:none;width:34%}
+  .pkg-row .p-price,.pkg-row .p-deliver{gap:8px;padding:18px 10px}
+  .pkg-row .p-unit{margin-top:-4px}
+  .pkg-row .p-get{font-size:15.5px}
+  .pkg-row .p-features{padding:18px 20px}
+  .pkg-row .p-cta{padding:10px;background:transparent}
+  .pkg-row .p-cta .btn{width:100%;justify-content:center}
+}
+/* tablets and small laptops: the picture card is short, so the stack moves to the right of the text */
+@media (max-width:1280px){
+  .pkg-row .p-img{min-height:210px}
+  .pkg-row .p-name,.pkg-row .p-for{max-width:64%}
+  .pkg-row .vis-stack .stack{left:auto;right:-4%;top:auto;bottom:10%;transform:none;width:36%}
+  .pkg-row .vis-stack .glow3d{left:auto;right:4%;transform:none;width:34%}
+}
