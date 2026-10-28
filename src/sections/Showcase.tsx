@@ -1,12 +1,13 @@
 import { useEffect, useRef, useState, type KeyboardEvent } from "react";
 import { SectionIntro } from "@/components/ui";
 import { SecFoot } from "@/components/SecFoot";
-import { WebShowcaseVis, N8nFlowVis } from "@/components/visuals";
+import { WebShowcaseVis } from "@/components/visuals";
 import { ChatDemo } from "@/components/ChatDemo";
 import { MissedCallDemo } from "@/components/demos/MissedCallDemo";
 import { CaptionDemo } from "@/components/demos/CaptionDemo";
 import { ReceiptDemo } from "@/components/demos/ReceiptDemo";
 import { ReportDemo } from "@/components/demos/ReportDemo";
+import { AutomationsDemo } from "@/components/demos/AutomationsDemo";
 import { VideoTile } from "@/components/VideoPlayer";
 import { SHOWCASE_TABS } from "@/data/media";
 import { useLang } from "@/lib/i18n";
@@ -50,7 +51,7 @@ export function Showcase() {
   const fallback = () => {
     if (Demo) return <div className={`card show-stage show-stage--demo stage-${tab.id}`}><Demo /></div>;
     if (tab.id === "web") return <WebShowcaseVis name={t.showcase.slots[0]} />;
-    return <N8nFlowVis name={t.showcase.slots[1]} />;
+    return <AutomationsDemo />;
   };
 
   return (

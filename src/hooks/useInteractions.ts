@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { reduceMotion } from "@/lib/scroll";
 
 /** Cards that gently tilt toward the pointer and catch a soft spotlight. */
-const TILT = ".card-featured, .card-suite, .card-product, .labs-card, .cb-card, .show-stage";
+const TILT = ".card-featured, .card-suite, .card-product, .labs-card, .cb-card, .show-stage--video";
 /** Primary buttons that lean a few pixels toward the pointer. */
 const MAGNET = ".btn-solid, .btn-arrow.solid, .hero-cta .btn";
 
