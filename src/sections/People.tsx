@@ -6,8 +6,8 @@ import { useLang } from "@/lib/i18n";
 
 /* Photos and portrait variants stay constant across languages. */
 const TEAM_META: { photo: string | null; variant: number }[] = [
-  { photo: "/img/vincent.png", variant: 0 },
-  { photo: "/img/trisha.png", variant: 1 },
+  { photo: "/img/vincent.jpg", variant: 0 },
+  { photo: "/img/trisha.jpg", variant: 1 },
 ];
 
 const FOUNDING_META: { photo: string | null; variant: number }[] = [

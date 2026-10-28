@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { CONTACTS } from "@/lib/config";
 import { InstagramIcon } from "./ui";
 
-const ITEMS = [
+export const CONTACT_ITEMS = [
   {
     label: "Instagram", href: CONTACTS.instagram, cls: "ig",
     icon: <InstagramIcon />,
@@ -52,7 +52,7 @@ export function ContactBubble() {
   return (
     <div className={`contact-dial${open ? " open" : ""}`} onClick={(e) => e.stopPropagation()}>
       <div className="cd-items" aria-hidden={!open}>
-        {ITEMS.map((it, i) => (
+        {CONTACT_ITEMS.map((it, i) => (
           <a
             key={it.label}
             className={`cd-item ${it.cls}`}
@@ -61,7 +61,7 @@ export function ContactBubble() {
             rel="noopener"
             aria-label={it.label}
             tabIndex={open ? 0 : -1}
-            style={{ transitionDelay: open ? `${i * 45}ms` : `${(ITEMS.length - 1 - i) * 30}ms` }}
+            style={{ transitionDelay: open ? `${i * 45}ms` : `${(CONTACT_ITEMS.length - 1 - i) * 30}ms` }}
           >
             <span className="cd-ic">{it.icon}</span>
             <span className="cd-label">{it.label}</span>

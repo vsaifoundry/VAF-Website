@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { StarsCanvas } from "@/components/StarsCanvas";
-import { ScrollLink, ArrowIcon, InstagramIcon, SpinBadge } from "@/components/ui";
+import { ScrollLink, ArrowIcon, SpinBadge } from "@/components/ui";
 import { makeSubmitHandler, field } from "@/lib/forms";
-import { INSTAGRAM } from "@/lib/config";
+import { INSTAGRAM, CONTACTS } from "@/lib/config";
+import { CONTACT_ITEMS } from "@/components/ContactBubble";
 import { useLang } from "@/lib/i18n";
 import type { Dict } from "@/data/translations";
 
 const LINK_IDS = [
-  "work", "showcase", "crossborder", "services", "process", "statistics", "pricing",
-  "faq", "advisors", "team", "founding", "reviews", "labs", "audit",
+  "services", "showcase", "process", "pricing", "crossborder", "team", "faq", "audit",
 ] as const;
 
 export function BrandBand() {
@@ -53,9 +53,16 @@ export function Footer() {
           <div className="card foot-follow reveal">
             <h3>{ft.follow}</h3>
             <div className="foot-socials">
-              <a href={INSTAGRAM} target="_blank" rel="noopener" aria-label="Instagram">
-                <InstagramIcon />
-              </a>
+              {CONTACT_ITEMS.map((it) => (
+                <a key={it.label} className={it.cls} href={it.href} aria-label={it.label}
+                   target={it.href.startsWith("mailto:") ? undefined : "_blank"} rel="noopener">
+                  {it.icon}
+                </a>
+              ))}
+            </div>
+            <div className="foot-direct">
+              <a href={CONTACTS.whatsapp} target="_blank" rel="noopener">{CONTACTS.phoneDisplay}</a>
+              <a href={CONTACTS.email}>{CONTACTS.emailDisplay}</a>
             </div>
           </div>
 

@@ -2,7 +2,8 @@ import { useEffect, useRef } from "react";
 import { StarsCanvas } from "@/components/StarsCanvas";
 import { reduceMotion } from "@/lib/scroll";
 import { useLang } from "@/lib/i18n";
-import { FillWords } from "@/components/ui";
+import { FillWords, ScrollLink, ArrowIcon } from "@/components/ui";
+import { PlayIcon } from "@/components/VideoPlayer";
 
 export function Hero() {
   const { t } = useLang();
@@ -44,6 +45,20 @@ export function Hero() {
         <h1 className="hero-title" data-fill data-fill-hero>
           <FillWords text={t.hero.title} />
         </h1>
+        <p className="hero-sub">{t.hero.sub}</p>
+        <div className="hero-cta">
+          <ScrollLink to="contact" className="btn btn-solid">
+            <ArrowIcon />{t.common.bookCall}
+          </ScrollLink>
+          <ScrollLink to="showcase" className="btn btn-ghost">
+            <PlayIcon />{t.hero.cta2}
+          </ScrollLink>
+        </div>
+        <ul className="hero-chips">
+          {t.hero.chips.map((c, i) => (
+            <li key={c} style={{ animationDelay: `${0.9 + i * 0.12}s` }}><i aria-hidden />{c}</li>
+          ))}
+        </ul>
       </div>
 
       <div className="hero-hint">

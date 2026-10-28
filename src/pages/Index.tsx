@@ -19,6 +19,7 @@ import { ContactBubble } from "@/components/ContactBubble";
 import { initSmoothScroll } from "@/lib/scroll";
 import { useRevealAll } from "@/hooks/useReveal";
 import { useFillTitles } from "@/hooks/useFillTitles";
+import { useInteractions } from "@/hooks/useInteractions";
 import { useLang } from "@/lib/i18n";
 
 const Index = () => {
@@ -30,6 +31,7 @@ const Index = () => {
   useEffect(() => { initSmoothScroll(() => menuRef.current); }, []);
   useRevealAll();
   useFillTitles(lang);
+  useInteractions();
 
   return (
     <>

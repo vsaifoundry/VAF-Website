@@ -4,9 +4,10 @@ import { INSTAGRAM } from "@/lib/config";
 import { useLang, LANGS } from "@/lib/i18n";
 import type { Dict } from "@/data/translations";
 
+/** Kept short on purpose: the pages people actually look for.
+ *  Every section is still on the page; scrolling reaches all of them. */
 const NAV_IDS = [
-  "home", "work", "showcase", "crossborder", "services", "process", "statistics", "pricing",
-  "faq", "advisors", "team", "founding", "reviews", "labs", "audit", "contact",
+  "services", "showcase", "process", "pricing", "crossborder", "team", "faq", "contact",
 ] as const;
 
 function useScrollSpy() {
@@ -115,6 +116,7 @@ export function Header({
           V's AI Foundry<sup>®</sup>
         </ScrollLink>
         <div className="head-actions">
+          <ScrollLink to="contact" className="btn btn-solid head-cta">{t.common.bookCall}</ScrollLink>
           <LangSelector />
           <button className="theme-toggle" onClick={toggleTheme} aria-label="Toggle dark mode">
             <svg className="tt-moon" viewBox="0 0 24 24" aria-hidden>
