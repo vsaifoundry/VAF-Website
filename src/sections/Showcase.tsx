@@ -1,15 +1,19 @@
-import { useRef, useState, type KeyboardEvent } from "react";
+import { useEffect, useRef, useState, type KeyboardEvent } from "react";
 import { SectionIntro } from "@/components/ui";
 import { SecFoot } from "@/components/SecFoot";
 import { WebShowcaseVis, N8nFlowVis } from "@/components/visuals";
 import { ChatDemo } from "@/components/ChatDemo";
+import { MissedCallDemo } from "@/components/demos/MissedCallDemo";
+import { CaptionDemo } from "@/components/demos/CaptionDemo";
+import { ReceiptDemo } from "@/components/demos/ReceiptDemo";
+import { ReportDemo } from "@/components/demos/ReportDemo";
 import { VideoTile } from "@/components/VideoPlayer";
 import { SHOWCASE_TABS } from "@/data/media";
 import { useLang } from "@/lib/i18n";
 
-/** "See it in action": three tabs (chat assistant, websites, automations).
- *  Each tab plays its video when one is set in src/data/media.ts, and
- *  otherwise shows its interactive demo or animation. */
+/** "See it in action": quick demos, one per tab (order set in src/data/media.ts).
+ *  Each tab plays its video when one is set there, and otherwise shows its
+ *  interactive demo or animation. */
 export function Showcase() {
   const { t } = useLang();
   const [active, setActive] = useState(0);
@@ -28,11 +32,23 @@ export function Showcase() {
     tabRefs.current[next]?.focus();
   };
 
+  // on phones the tab row scrolls sideways: keep the chosen tab in view (never scrolls the page)
+  useEffect(() => {
+    const btn = tabRefs.current[active];
+    const row = btn?.parentElement;
+    if (!btn || !row || row.scrollWidth <= row.clientWidth) return;
+    const left = btn.offsetLeft - (row.clientWidth - btn.offsetWidth) / 2;
+    row.scrollTo({ left, behavior: "smooth" });
+  }, [active]);
+
   const tab = SHOWCASE_TABS[active];
   const label = t.showcase.tabs[active].label;
 
+  /* interactive demos sit on the dark stage; the two animations bring their own frame */
+  const DEMOS = { chat: ChatDemo, missed: MissedCallDemo, captions: CaptionDemo, receipts: ReceiptDemo, report: ReportDemo };
+  const Demo = tab.id in DEMOS ? DEMOS[tab.id as keyof typeof DEMOS] : null;
   const fallback = () => {
-    if (tab.id === "chat") return <ChatDemo />;
+    if (Demo) return <div className={`card show-stage show-stage--demo stage-${tab.id}`}><Demo /></div>;
     if (tab.id === "web") return <WebShowcaseVis name={t.showcase.slots[0]} />;
     return <N8nFlowVis name={t.showcase.slots[1]} />;
   };
@@ -43,7 +59,7 @@ export function Showcase() {
         <h2 className="sec-title reveal">{t.showcase.secTitle}</h2>
         <SectionIntro num="002" statement={t.showcase.statement} aside={t.showcase.aside} />
 
-        <div className="show-tabs reveal" role="tablist" aria-label={t.showcase.secTitle} onKeyDown={onKey}>
+        <div className="show-tabs-wrap reveal"><div className="show-tabs" role="tablist" aria-label={t.showcase.secTitle} onKeyDown={onKey}>
           {SHOWCASE_TABS.map((tb, i) => (
             <button
               key={tb.id}
@@ -61,7 +77,7 @@ export function Showcase() {
               {t.showcase.tabs[i].label}
             </button>
           ))}
-        </div>
+        </div></div>
 
         <div
           key={tab.id}
@@ -73,8 +89,6 @@ export function Showcase() {
           <p className="show-copy">{t.showcase.tabs[active].copy}</p>
           {tab.video ? (
             <div className="card show-stage show-stage--video"><VideoTile video={tab.video} title={label} /></div>
-          ) : tab.id === "chat" ? (
-            <div className="card show-stage show-stage--chat">{fallback()}</div>
           ) : (
             fallback()
           )}

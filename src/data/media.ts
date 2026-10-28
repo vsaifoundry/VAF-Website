@@ -18,12 +18,19 @@ export type ShowcaseVideo =
   | { youtube: string; poster?: string };
 
 export type ShowcaseTab = {
-  id: "chat" | "web" | "flow";
+  id: "chat" | "missed" | "captions" | "receipts" | "report" | "web" | "flow";
   video?: ShowcaseVideo;
 };
 
+/* The order here is the order of the tabs. Their labels and one-line
+   descriptions are in src/data/translations.ts (showcase.tabs), in the
+   same order, so move both together. */
 export const SHOWCASE_TABS: ShowcaseTab[] = [
   { id: "chat" /* , video: { src: "/video/whatsapp-demo.mp4", poster: "/video/whatsapp-demo.jpg" } */ },
+  { id: "missed" },
+  { id: "captions" },
+  { id: "receipts" },
+  { id: "report" },
   { id: "web" },
   { id: "flow" },
 ];
